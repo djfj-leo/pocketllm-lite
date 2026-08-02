@@ -12,6 +12,12 @@ We use a specific versioning pattern:
 - Once the 3rd number reaches 100, the next version resets it to 0 and increments the 2nd number (minor). For example: 1.0.100 becomes 1.1.0.
 - Similarly, 1.1.100 becomes 1.2.0.
 
+## [1.0.31] - 2026-08-02
+
+### Added
+- **Release & Promotion Blueprint**: Prepared marketing launch assets, human copywriting guide, GitHub pull request targets, and platform submission strategies.
+- **Enhanced Documentation**: Updated `README.md` to highlight Tavily live web search, inline markdown citations, speed profiler, and version 1.0.31 release features.
+
 ## [1.0.30] - 2026-07-04
 
 ### Added

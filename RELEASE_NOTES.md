@@ -1,4 +1,4 @@
-# Release Notes - Version 1.0.30
+# Release Notes - Version 1.0.31
 
 ## **Highlights: Model Loading Status Indicator**
 This release introduces user-friendly feedback during offline model initialization:

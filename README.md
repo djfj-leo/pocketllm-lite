@@ -75,7 +75,16 @@ Enable agentic capabilities to let local models execute offline code tools:
 *   **System Diagnostics**: Queries native OS platforms, dates, times, and zones.
 *   **Offline Knowledge Search**: Provides simulated general reference knowledge.
 
-### 4. Offline Voice Dictation & Text-to-Speech
+### 4. Live Web Search & Citation Engine (Tavily)
+*   **Real-time Internet Fallback**: Toggle Tavily Web Search directly from the chat toolbar when your offline model needs current internet data.
+*   **Inline Clickable Citations**: Search results are conditioned into LLM responses using structured markdown citations `[Source Name](URL)` that open in your device's browser.
+*   **Shimmering Status HUD**: Visual feedback indicating active web queries in real-time.
+
+### 5. Performance Benchmarking & Speed Profiling
+*   **On-Device Profiler**: Measure Time to First Token (TTFT) and token generation speed (tokens/sec) for local models directly on your hardware.
+*   **Historical Logs**: Track performance gains/losses across different quantization levels and model architectures.
+
+### 6. Offline Voice Dictation & Text-to-Speech
 *   **Dictation (STT)**: Dictate your prompts offline using an animated bottom microphone HUD.
 *   **Speak Back (TTS)**: Single-tap speak chips to read any AI completion aloud using offline native speech engines.
 
