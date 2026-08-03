@@ -25,6 +25,8 @@ import '../features/settings/presentation/screens/benchmark_screen.dart';
 import '../features/chat/presentation/screens/persona_management_screen.dart';
 import '../features/chat/presentation/screens/skill_management_screen.dart';
 import '../features/chat/presentation/screens/skill_details_screen.dart';
+import '../features/settings/presentation/screens/privacy_network_screen.dart';
+import '../features/chat/presentation/screens/model_comparison_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -121,6 +123,14 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'personas',
             builder: (context, state) => const PersonaManagementScreen(),
+          ),
+          GoRoute(
+            path: 'privacy-network',
+            builder: (context, state) => const PrivacyNetworkScreen(),
+          ),
+          GoRoute(
+            path: 'model-comparison',
+            builder: (context, state) => const ModelComparisonScreen(),
           ),
           GoRoute(
             path: 'skills',

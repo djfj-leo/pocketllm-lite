@@ -41,11 +41,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <!-- AdMob App ID for production -->
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="${admobAppId}"/>
-        
+
         <!-- FileProvider for OTA updates -->
         <provider
             android:name="androidx.core.content.FileProvider"

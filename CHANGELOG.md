@@ -12,6 +12,31 @@ We use a specific versioning pattern:
 - Once the 3rd number reaches 100, the next version resets it to 0 and increments the 2nd number (minor). For example: 1.0.100 becomes 1.1.0.
 - Similarly, 1.1.100 becomes 1.2.0.
 
+## [1.0.33] - 2026-08-03
+
+### Added
+- **Device-Aware Model Recommendation Engine**: Hardware profiler (`DeviceSpecService`) measuring available RAM, CPU cores, GPU/NPU availability, and storage. Scores model fit using a multi-factor compatibility formula and displays badges (`Recommended`, `Can run`, `Risk of crash`, `Too large for this device`).
+- **Task-Based Model Router**: Smart router (`TaskRouterService`) mapping task categories (`Fast Chat`, `Best Reasoning`, `Coding`, `Document Analysis`, `Creative Writing`, `Vision`, `Low Battery`, `Long Context`) to optimal installed local models with manual override options.
+- **Model Sampling Profile Registry**: Architectural registry (`ModelProfileRegistry`) providing pre-tuned sampling defaults, chat templates, BOS/EOS tokens, thinking tags (`<think>`), and stop sequences per model family.
+- **Context-Budget Manager & Summarizer**: Dynamic context budget manager (`ContextBudgetManager`) allocating token budgets (System: 10%, Recent chat: 40%, Memory: 15%, Document RAG: 25%, Response reservation: 10%) with automatic local conversation summarization on context boundaries.
+- **Side-by-Side A/B Model Comparison**: Interactive benchmark screen (`ModelComparisonScreen`) running side-by-side prompt execution to measure Time to First Token (TTFT), generation speed (tokens/sec), peak RAM, and winner selection.
+- **Chat Tree Branching & Swiping**: Branching manager (`ChatBranchService`) enabling message editing, conversation branching, and multi-version response swiping.
+
+## [1.0.32] - 2026-08-03
+
+### Added
+- **Privacy & Network Transparency Centre**: Introduced a dedicated Privacy & Network control screen (`PrivacyNetworkScreen`) featuring real-time local inference status, endpoint transparency badges, remote endpoint confirmation prompts, and granular consent toggles for automatic update checks, online model browsing, Tavily web search, and GitHub skill installations.
+- **Application-Level Strict Offline Mode**: Implemented `NetworkPolicyService` with application-level interception that blocks all non-loopback network calls when Strict Offline Mode is enabled.
+- **External Connection Audit Log**: Interactive session audit log recording every outbound request domain, purpose, trigger, information sent, and authorization status.
+- **Machine-Readable Network Policy**: Published `assets/network_policy.json` specifying automatic and user-triggered connection rules.
+- **CI Tracker & Analytics Regression Suite**: Added `test/regressions/no_ads_or_analytics_test.dart` to automatically block ad SDK or analytics telemetry packages across source files, pubspec, Gradle, ProGuard, and Android XML manifests.
+- **Local Font Enforcement**: Disabled runtime font network downloads (`allowRuntimeFetching = false`) to guarantee fonts rely strictly on bundled local assets.
+
+### Changed
+- **Privacy Claims & Positioning**: Rewrote privacy documentation to remove unachievable absolute offline claims and accurately describe local-first inference, local storage boundaries, and explicit user controls.
+- **Purged AdMob Remnants**: Completely removed legacy AdMob `APPLICATION_ID` manifest placeholders, Gradle properties, and ProGuard rules.
+- **Privacy-First Defaults**: Disabled automatic GitHub update checks by default.
+
 ## [1.0.31] - 2026-08-02
 
 ### Added

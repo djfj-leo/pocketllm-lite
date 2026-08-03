@@ -87,6 +87,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                         containerColor: theme.colorScheme.tertiaryContainer,
                         iconColor: theme.colorScheme.onTertiaryContainer,
                       ),
+                      _buildPrivacyPreferencesPage(),
                     ],
                   ),
                 ),
@@ -99,7 +100,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                       // Page indicators
                       Row(
                         children: List.generate(
-                          2,
+                          3,
                           (index) => AnimatedContainer(
                             duration: AppMotion.durationMD,
                             curve: AppMotion.curveStandard,
@@ -116,7 +117,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                         ),
                       ),
                       // Navigation button
-                      if (_currentPage == 1)
+                      if (_currentPage == 2)
                         FilledButton.icon(
                           onPressed: _finishOnboarding,
                           icon: const Icon(Icons.arrow_forward_rounded),
@@ -194,6 +195,87 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
               height: 1.6,
             ),
             textAlign: TextAlign.center,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPrivacyPreferencesPage() {
+    final theme = Theme.of(context);
+    final storage = ref.watch(storageServiceProvider);
+
+    final autoUpdateVal = storage.getSetting(
+      AppConstants.autoUpdateCheckKey,
+      defaultValue: false,
+    );
+    final autoUpdate = autoUpdateVal is bool ? autoUpdateVal : false;
+
+    final onlineModelsVal = storage.getSetting(
+      AppConstants.onlineModelBrowsingKey,
+      defaultValue: true,
+    );
+    final onlineModels = onlineModelsVal is bool ? onlineModelsVal : true;
+
+    final strictOfflineVal = storage.getSetting(
+      AppConstants.strictOfflineModeKey,
+      defaultValue: false,
+    );
+    final strictOffline = strictOfflineVal is bool ? strictOfflineVal : false;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.shield_outlined, size: 56, color: theme.colorScheme.primary),
+          const SizedBox(height: 16),
+          Text(
+            'Privacy & Connection Controls',
+            style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Configure network permissions according to your privacy standards. All settings can be adjusted later.',
+            style: theme.textTheme.bodyMedium,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 20),
+          Card(
+            child: Column(
+              children: [
+                CheckboxListTile(
+                  title: const Text('Check GitHub for updates automatically?'),
+                  subtitle: const Text('Connects to api.github.com for new releases. (Default: Off)'),
+                  value: autoUpdate,
+                  onChanged: (val) async {
+                    await storage.saveSetting(AppConstants.autoUpdateCheckKey, val ?? false);
+                    setState(() {});
+                  },
+                ),
+                const Divider(height: 1),
+                CheckboxListTile(
+                  title: const Text('Allow optional online model browsing?'),
+                  subtitle: const Text('Enables searching Hugging Face for downloadable GGUF models.'),
+                  value: onlineModels,
+                  onChanged: (val) async {
+                    await storage.saveSetting(AppConstants.onlineModelBrowsingKey, val ?? true);
+                    setState(() {});
+                  },
+                ),
+                const Divider(height: 1),
+                SwitchListTile(
+                  title: const Text('Enable Strict Offline Mode'),
+                  subtitle: const Text('Blocks all non-loopback network calls at application level.'),
+                  value: strictOffline,
+                  onChanged: (val) async {
+                    await storage.saveSetting(AppConstants.strictOfflineModeKey, val);
+                    setState(() {});
+                  },
+                ),
+              ],
+            ),
           ),
         ],
       ),

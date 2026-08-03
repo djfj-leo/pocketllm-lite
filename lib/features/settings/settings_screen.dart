@@ -224,6 +224,18 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
+          title: const Text('Privacy & Network Centre', style: TextStyle(fontWeight: FontWeight.bold)),
+          subtitle: const Text(
+              'Strict Offline Mode, endpoint transparency, connection audit log, and privacy controls'),
+          leading: Icon(Icons.shield_rounded, color: theme.colorScheme.primary),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () {
+            HapticFeedback.lightImpact();
+            context.push('/settings/privacy-network');
+          },
+        ),
+        const Divider(height: 1, indent: 56),
+        ListTile(
           title: const Text('System, Benchmark & Updates'),
           subtitle: const Text(
               'Run speed benchmarks, activity/error logs, and check OTA updates'),

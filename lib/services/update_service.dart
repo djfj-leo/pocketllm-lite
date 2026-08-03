@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:ota_update/ota_update.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'network_policy_service.dart';
 
 /// Model representing a GitHub release
 class AppRelease {
@@ -102,10 +103,10 @@ class UpdateService {
   factory UpdateService() => _instance;
   UpdateService._internal();
 
-  /// Check if auto-update is enabled
+  /// Check if auto-update is enabled (disabled by default)
   Future<bool> isAutoUpdateEnabled() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_autoUpdateKey) ?? true; // Enabled by default
+    return prefs.getBool(_autoUpdateKey) ?? false; // Disabled by default for privacy
   }
 
   /// Set auto-update preference
@@ -152,6 +153,21 @@ class UpdateService {
         }
       }
 
+      final uri = Uri.parse(_releasesApiUrl);
+      final policy = NetworkPolicyService().evaluateConnection(
+        uri: uri,
+        purpose: ConnectionPurpose.updateCheck,
+        trigger: force ? 'manual_update_check' : 'auto_update_check',
+        infoSent: 'Standard HTTP GET header (Accept json), no user content',
+      );
+
+      if (!policy.allowed) {
+        return UpdateCheckResult(
+          updateAvailable: false,
+          error: policy.reason ?? 'Blocked by network policy',
+        );
+      }
+
       // Get current app version
       final packageInfo = await PackageInfo.fromPlatform();
       final currentVersion = packageInfo.version;
@@ -162,7 +178,7 @@ class UpdateService {
 
       // Fetch latest release from GitHub
       final response = await http.get(
-        Uri.parse(_releasesApiUrl),
+        uri,
         headers: {'Accept': 'application/vnd.github.v3+json'},
       ).timeout(const Duration(seconds: 10));
 

@@ -1,8 +1,13 @@
-# Release Notes - Version 1.0.31
+# Release Notes - Version 1.0.33 (Better Local AI & Hardware Intelligence)
 
-## **Highlights: Model Loading Status Indicator**
-This release introduces user-friendly feedback during offline model initialization:
-1. **Model Loading Status Indicator**: Displays a clear message (*Loading model, please wait...*) in the chat message bubble during offline GGUF model loading, indicating that the model is actively loading into RAM before token generation starts.
+## **Highlights: Device-Aware AI, Task Routing & Context Budgeting**
+This release delivers Phase 2 of our product roadmap, bringing hardware-aware model recommendations, intelligent task routing, model profile sampling defaults, context budgeting, conversation branching, and side-by-side A/B model comparison:
+1. **Device-Aware Recommendation Engine**: Automatically profiles hardware RAM, CPU cores, GPU/NPU availability, and storage to score model fit using a multi-factor compatibility formula (`Recommended`, `Can run`, `Risk of crash`, `Too large for this device`).
+2. **Task-Based Model Router**: High-level task selector (`Fast Chat`, `Best Reasoning`, `Coding`, `Document Analysis`, `Creative Writing`, `Vision`, `Low Battery`, `Long Context`) that automatically routes queries to the optimal local model. Includes manual override controls.
+3. **Model Sampling Profile Registry**: Architectural registry maintaining tuned sampling parameters (temperature, topP, topK, repeatPenalty), chat templates, BOS/EOS tokens, thinking tags (`<think>`), and stop sequences per model family.
+4. **Context-Budget Manager**: Enforces dynamic token allocations (System: 10%, Recent chat: 40%, Memory: 15%, Document RAG: 25%, Response reservation: 10%) with automatic local conversation summarization on context boundaries.
+5. **Side-by-Side A/B Model Comparison**: Interactive benchmark screen (`ModelComparisonScreen`) running side-by-side prompt execution to measure Time to First Token (TTFT), generation speed (tokens/sec), peak RAM, and winner voting.
+6. **Chat Tree Branching & Swiping**: Branching engine (`ChatBranchService`) enabling message editing, conversation branching, and multi-version response swiping (`Response 1 of 2`).
 
 ---
 

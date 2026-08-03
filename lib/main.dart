@@ -13,6 +13,9 @@ import 'services/update_service.dart';
 
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
+import 'package:google_fonts/google_fonts.dart';
+import 'services/network_policy_service.dart';
+
 // Global navigator key for showing dialogs from anywhere
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -20,8 +23,13 @@ void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
+  // Disable network font fetching to ensure strictly local assets
+  GoogleFonts.config.allowRuntimeFetching = false;
+
   final storageService = StorageService();
   await storageService.init();
+
+  NetworkPolicyService().init(storageService);
 
   final errorLogService = ErrorLogService();
   await errorLogService.init();
@@ -39,10 +47,12 @@ void main() async {
     ),
   );
 
-  // Check for updates after app is initialized (delayed to avoid blocking UI)
-  Future.delayed(const Duration(seconds: 3), () {
-    _checkForUpdates();
-  });
+  // Check for updates only if auto-update is explicitly opted into by user
+  if (NetworkPolicyService().isAutoUpdateCheckEnabled) {
+    Future.delayed(const Duration(seconds: 3), () {
+      _checkForUpdates();
+    });
+  }
 }
 
 // Check for updates from GitHub releases

@@ -39,6 +39,13 @@ class AppConstants {
   // Tavily API Key
   static const String tavilyApiKeyKey = 'tavily_api_key';
 
+  // Network & Privacy Control Keys
+  static const String autoUpdateCheckKey = 'auto_update_check';
+  static const String onlineModelBrowsingKey = 'online_model_browsing';
+  static const String strictOfflineModeKey = 'strict_offline_mode';
+  static const String tavilySearchEnabledKey = 'tavily_search_enabled';
+  static const String githubSkillsEnabledKey = 'github_skills_enabled';
+
   // New Appearance Keys
   static const String chatPaddingKey = 'chat_padding';
   static const String showAvatarsKey = 'show_avatars';

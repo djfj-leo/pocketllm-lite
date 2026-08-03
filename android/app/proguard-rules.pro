@@ -21,18 +21,6 @@
 -keep class io.flutter.plugin.common.** { *; }
 
 # ============================================================================
-# GOOGLE MOBILE ADS (AdMob)
-# ============================================================================
--keep class com.google.android.gms.ads.** { *; }
--keep class com.google.ads.** { *; }
--dontwarn com.google.android.gms.ads.**
--dontwarn com.google.ads.**
-
-# Keep AdMob internal classes
--keep class com.google.android.gms.internal.ads.** { *; }
--keepclassmembers class com.google.android.gms.ads.** { *; }
-
-# ============================================================================
 # GOOGLE PLAY CORE (Deferred Components, Split Install)
 # ============================================================================
 -dontwarn com.google.android.play.core.**

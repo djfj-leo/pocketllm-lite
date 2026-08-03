@@ -1,0 +1,32 @@
+{
+  "automaticConnections": [
+    {
+      "domain": "api.github.com",
+      "purpose": "update_check",
+      "defaultEnabled": false,
+      "sendsUserContent": false
+    }
+  ],
+  "userTriggeredConnections": [
+    {
+      "domain": "huggingface.co",
+      "purpose": "model_discovery_and_download",
+      "sendsUserContent": false
+    },
+    {
+      "domain": "api.tavily.com",
+      "purpose": "web_search",
+      "sendsUserContent": true
+    },
+    {
+      "domain": "raw.githubusercontent.com",
+      "purpose": "skill_installation",
+      "sendsUserContent": false
+    },
+    {
+      "domain": "user_configured_remote_ollama",
+      "purpose": "remote_inference",
+      "sendsUserContent": true
+    }
+  ]
+}
