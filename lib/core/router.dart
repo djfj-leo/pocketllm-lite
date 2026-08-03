@@ -27,6 +27,7 @@ import '../features/chat/presentation/screens/skill_management_screen.dart';
 import '../features/chat/presentation/screens/skill_details_screen.dart';
 import '../features/settings/presentation/screens/privacy_network_screen.dart';
 import '../features/chat/presentation/screens/model_comparison_screen.dart';
+import '../features/profile/presentation/screens/memory_inspector_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -131,6 +132,10 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'model-comparison',
             builder: (context, state) => const ModelComparisonScreen(),
+          ),
+          GoRoute(
+            path: 'memory-inspector',
+            builder: (context, state) => const MemoryInspectorScreen(),
           ),
           GoRoute(
             path: 'skills',

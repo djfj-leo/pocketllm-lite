@@ -12,6 +12,15 @@ We use a specific versioning pattern:
 - Once the 3rd number reaches 100, the next version resets it to 0 and increments the 2nd number (minor). For example: 1.0.100 becomes 1.1.0.
 - Similarly, 1.1.100 becomes 1.2.0.
 
+## [1.0.34] - 2026-08-03
+
+### Added
+- **Local Long-Term Memory & Sensitivity Shield**: Structured user memory service (`LocalMemoryService`) extracting durable facts across 7 categories (*Personal Facts, Preferences, Projects, People, Goals, Writing Style, Reusable Instructions*) with automatic suppression of password, credit card, and API key data.
+- **Local Memory Inspector**: Dedicated control panel (`MemoryInspectorScreen`) allowing users to view, search, edit, delete, pin, toggle, or manually create long-term memories.
+- **Hybrid Retrieval Engine & MMR**: Dense vector + BM25 hybrid search engine (`HybridRetrievalService`) with Maximum Marginal Relevance (MMR) deduplication preventing repetitive memory/context injection.
+- **Document Workspace & Semantic Chunker**: RAG document workspace (`DocumentWorkspaceService`) preserving page numbers, heading hierarchies, code blocks, and formatting inline page citations `[DocName.pdf, Page X]`.
+- **Offline Local OCR & Document Vision**: On-device text extraction service (`LocalOcrService`) for scanned PDFs, screenshots, whiteboards, forms, and receipts without external APIs.
+
 ## [1.0.33] - 2026-08-03
 
 ### Added
