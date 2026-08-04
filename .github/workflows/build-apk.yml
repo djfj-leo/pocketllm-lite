@@ -12,15 +12,8 @@ jobs:
         with:
           flutter-version: '3.27.0'
           channel: 'stable'
-      - run: |
-          cat >> pubspec.yaml << 'OVERRIDE'
-          dependency_overrides:
-            test_api: any
-            test: any
-            test_core: any
-          OVERRIDE
-      - run: flutter pub get
-      - run: flutter build apk --release
+      - run: flutter pub get --no-dev
+      - run: flutter build apk --release --no-pub
       - uses: actions/upload-artifact@v4
         with:
           name: PocketLLMLite-Chinese
