@@ -28,6 +28,8 @@ import '../features/chat/presentation/screens/skill_details_screen.dart';
 import '../features/settings/presentation/screens/privacy_network_screen.dart';
 import '../features/chat/presentation/screens/model_comparison_screen.dart';
 import '../features/profile/presentation/screens/memory_inspector_screen.dart';
+import '../features/media/presentation/screens/audio_transcription_screen.dart';
+import '../features/settings/presentation/screens/prompt_lab_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -136,6 +138,14 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'memory-inspector',
             builder: (context, state) => const MemoryInspectorScreen(),
+          ),
+          GoRoute(
+            path: 'audio-transcription',
+            builder: (context, state) => const AudioTranscriptionScreen(),
+          ),
+          GoRoute(
+            path: 'prompt-lab',
+            builder: (context, state) => const PromptLabScreen(),
           ),
           GoRoute(
             path: 'skills',

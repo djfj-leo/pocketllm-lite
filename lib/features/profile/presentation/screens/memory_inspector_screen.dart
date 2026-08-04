@@ -24,7 +24,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             DropdownButtonFormField<MemoryType>(
-              value: category,
+              initialValue: category,
               decoration: const InputDecoration(labelText: 'Category'),
               items: MemoryType.values
                   .map((t) => DropdownMenuItem(
@@ -149,7 +149,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
                                 },
                               ),
                               IconButton(
-                                icon: const Icon(Icons.delete_outline_rounded, color: Colors.red),
+                                icon: Icon(Icons.delete_outline_rounded, color: theme.colorScheme.error),
                                 onPressed: () {
                                   memoryService.deleteMemory(mem.id);
                                   setState(() {});

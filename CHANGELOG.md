@@ -12,6 +12,17 @@ We use a specific versioning pattern:
 - Once the 3rd number reaches 100, the next version resets it to 0 and increments the 2nd number (minor). For example: 1.0.100 becomes 1.1.0.
 - Similarly, 1.1.100 becomes 1.2.0.
 
+## [1.0.35] - 2026-08-04
+
+### Added
+- **Typed Tool-Calling Engine & JSON Schema Validation**: Structured tool execution parser (`TypedToolCallingService`) validating JSON payloads `{"tool": "...", "arguments": {...}}` with JSON schema enforcement, execution timeouts, parameter rejection, and execution history tracking.
+- **Skill Permission Manifest & Inspector**: Granular permission declaration system (`SkillPermissionManifest`) parsing SKILL.md YAML frontmatter permissions (`network`, `filesystem`, `device`, `risk`) with pre-installation risk warnings.
+- **Agentic Mobile Action Engine**: Native device action scheduler (`MobileActionService`) supporting `scheduleReminder`, `createNote`, `draftEmail`, and `copyToClipboard` with user confirmation prompts.
+- **Offline Audio Transcription Workspace**: Dedicated audio workspace (`AudioTranscriptionScreen` & `AudioTranscriptionService`) providing timestamped transcriptions, meeting summaries, task extractions, and `.txt`/`.md`/`.srt` export capabilities.
+- **Prompt Lab & Parameter Benchmarking Workspace**: Engineering environment (`PromptLabScreen`) for system prompt editing, dynamic variable replacements `{{variable}}`, sampling parameter sliders (Temperature, Top P, Top K, Repeat Penalty), and side-by-side prompt benchmarks.
+- **Embedded OpenAI-Compatible Local Server**: Local HTTP server (`OpenAiServerService`) exposing `/v1/chat/completions`, `/v1/models`, and `/v1/embeddings` bound to `localhost` with bearer token security and live request audit logs.
+- **Encrypted Local Backup & Data Migration**: Archive export and restore service (`BackupMigrationService`) generating password-protected `.pllm` JSON archives containing chats, settings, personas, skills, and memories with SHA-256 integrity verification.
+
 ## [1.0.34] - 2026-08-03
 
 ### Added

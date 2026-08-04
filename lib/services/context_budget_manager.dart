@@ -99,10 +99,8 @@ class ContextBudgetManager {
       );
     }
 
-    // Context overflow occurred - Create local summary turn for older messages
-    final summaryContent = 'Summary of earlier conversation turns (${olderMessages.length} messages): ' +
-        olderMessages.map((m) => '${m.role}: ${m.content}').join(' ').substring(0, 180) +
-        '...';
+    final summaryContent =
+        'Summary of earlier conversation turns (${olderMessages.length} messages): ${olderMessages.map((m) => '${m.role}: ${m.content}').join(' ').substring(0, 180)}...';
 
     final summaryMessage = ChatMessage(
       role: 'system',

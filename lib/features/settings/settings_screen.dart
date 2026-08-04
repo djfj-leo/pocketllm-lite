@@ -236,6 +236,30 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
+          title: const Text('Prompt Lab & Engineering'),
+          subtitle: const Text(
+              'Variable replacement, sampling overrides, and parameter benchmarks'),
+          leading: Icon(Icons.science_outlined, color: theme.colorScheme.primary),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () {
+            HapticFeedback.lightImpact();
+            context.push('/settings/prompt-lab');
+          },
+        ),
+        const Divider(height: 1, indent: 56),
+        ListTile(
+          title: const Text('Audio Workspace & Speech'),
+          subtitle: const Text(
+              'Offline speech transcription, meeting summaries, and task extractions'),
+          leading: Icon(Icons.graphic_eq_rounded, color: theme.colorScheme.primary),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () {
+            HapticFeedback.lightImpact();
+            context.push('/settings/audio-transcription');
+          },
+        ),
+        const Divider(height: 1, indent: 56),
+        ListTile(
           title: const Text('System, Benchmark & Updates'),
           subtitle: const Text(
               'Run speed benchmarks, activity/error logs, and check OTA updates'),

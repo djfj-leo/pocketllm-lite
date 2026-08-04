@@ -1,12 +1,14 @@
-# Release Notes - Version 1.0.34 (Memory & Document Workspace)
+# Release Notes - Version 1.0.35 (Agents, Audio Workspace & Ecosystem)
 
-## **Highlights: Local Long-Term Memory, Hybrid RAG & Offline OCR**
-This release delivers Phase 3 of our product roadmap, equipping PocketLLM Lite with persistent local memory, transparent memory inspection, an enterprise-grade document workspace, hybrid search with page citations, and offline OCR:
-1. **Local Long-Term Memory & Sensitivity Shield**: Automatically extracts durable facts across 7 categories (*Personal Facts, Preferences, Projects, People, Goals, Writing Style, Reusable Instructions*) while suppressing sensitive credentials.
-2. **Local Memory Inspector (`/settings/memory-inspector`)**: Interactive panel allowing users to view, search, edit, delete, pin, toggle, or manually create long-term memories.
-3. **Hybrid Retrieval Engine & MMR**: Dense vector + BM25 hybrid search engine (`HybridRetrievalService`) with Maximum Marginal Relevance (MMR) deduplication preventing repetitive context injection.
-4. **Multi-Document Workspace & Semantic Chunker**: RAG workspace (`DocumentWorkspaceService`) preserving page numbers, heading hierarchies, code blocks, and formatting inline page citations `[DocName.pdf, Page X]`.
-5. **Offline Local OCR & Document Vision**: On-device text extraction service (`LocalOcrService`) for scanned PDFs, screenshots, whiteboards, forms, and receipts without external APIs.
+## **Highlights: Typed Tool Calling, Skill Permissions, Audio Workspace & OpenAI Local API**
+This release delivers Phase 4 of our product roadmap, introducing structured tool calling, skill permission manifests, an offline audio transcription workspace, prompt lab parameter engineering, a local OpenAI-compatible API server, and encrypted local backup migration:
+1. **Typed Tool-Calling Engine & JSON Schema Validation**: Structured tool execution parser (`TypedToolCallingService`) validating JSON payloads `{"tool": "...", "arguments": {...}}` with JSON Schema enforcement, execution timeouts, parameter rejection, and execution history tracking.
+2. **Skill Permission Manifest & Inspector**: Granular permission declaration system (`SkillPermissionManifest`) parsing SKILL.md YAML frontmatter permissions (`network`, `filesystem`, `device`, `risk`) with pre-installation risk warnings.
+3. **Agentic Mobile Action Engine**: Native device action scheduler (`MobileActionService`) supporting `scheduleReminder`, `createNote`, `draftEmail`, and `copyToClipboard` with user confirmation prompts.
+4. **Offline Audio Transcription Workspace (`/settings/audio-transcription`)**: Dedicated audio workspace (`AudioTranscriptionScreen` & `AudioTranscriptionService`) providing timestamped transcriptions, meeting summaries, task extractions, and `.txt`/`.md`/`.srt` export capabilities.
+5. **Prompt Lab Workspace (`/settings/prompt-lab`)**: Engineering environment (`PromptLabScreen`) for system prompt editing, dynamic variable replacements `{{variable}}`, sampling parameter sliders (Temperature, Top P, Top K, Repeat Penalty), and side-by-side prompt benchmarks.
+6. **Embedded OpenAI-Compatible Local Server**: Local HTTP server (`OpenAiServerService`) exposing `/v1/chat/completions`, `/v1/models`, and `/v1/embeddings` bound to `localhost` with bearer token security and live request audit logs.
+7. **Encrypted Local Backup & Data Migration**: Archive export and restore service (`BackupMigrationService`) generating password-protected `.pllm` JSON archives containing chats, settings, personas, skills, and memories with SHA-256 integrity verification.
 
 ---
 
