@@ -10,20 +10,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
+          flutter-version: '3.27.0'
           channel: 'stable'
-      - run: |
-          python3 -c "
-          import re
-          with open('pubspec.yaml', 'r') as f:
-              content = f.read()
-          content = re.sub(r'\ndev_dependencies:.*?(\n[a-z]|$)', r'\1', content, flags=re.DOTALL)
-          with open('pubspec.yaml', 'w') as f:
-              f.write(content)
-          "
-          echo "=== pubspec.yaml after cleanup ==="
-          cat pubspec.yaml
-      - run: flutter pub get
-      - run: flutter build apk --release
+      - run: flutter pub get --no-dev
+      - run: flutter build apk --release --no-pub
       - uses: actions/upload-artifact@v4
         with:
           name: PocketLLMLite-Chinese
