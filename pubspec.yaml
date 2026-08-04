@@ -54,7 +54,6 @@ dependencies:
   waveform_flutter: 1.2.0
 
 dev_dependencies:
-  flutter_test:
     sdk: flutter
 
   flutter_lints: ^5.0.0
