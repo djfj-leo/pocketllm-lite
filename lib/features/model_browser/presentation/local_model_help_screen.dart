@@ -11,8 +11,8 @@ class LocalModelHelpScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'GGUF Local Model Help',
-        subtitle: 'Understand offline local execution',
+        title: '本地模型帮助',
+        subtitle: '了解离线本地运行',
         onBack: () => context.pop(),
       ),
       body: ListView(

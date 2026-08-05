@@ -319,7 +319,7 @@ ollama pull <model-name>
       },
       child: Scaffold(
         appBar: M3AppBar(
-          title: 'Documentation',
+          title: '文档',
           onBack: () {
             // Use GoRouter's pop method instead of Navigator.pop to avoid stack issues
             if (GoRouter.of(context).canPop()) {

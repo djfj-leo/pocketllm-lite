@@ -50,7 +50,7 @@ class _UsageStatisticsScreenState extends ConsumerState<UsageStatisticsScreen>
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Usage Statistics',
+        title: '使用统计',
         onBack: () => Navigator.pop(context),
         actions: [
           IconButton(

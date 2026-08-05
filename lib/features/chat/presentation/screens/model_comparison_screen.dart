@@ -180,7 +180,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
                     controller: _promptController,
                     maxLines: 3,
                     decoration: const InputDecoration(
-                      hintText: 'Enter test prompt for side-by-side comparison...',
+                      hintText: '输入测试提示词进行对比...',
                     ),
                   ),
                   const SizedBox(height: 16),

@@ -42,8 +42,8 @@ class _PromptLabScreenState extends ConsumerState<PromptLabScreen> {
 
     return Scaffold(
       appBar: const M3AppBar(
-        title: 'Prompt Lab',
-        subtitle: 'Parameter Engineering & Template Benchmarks',
+        title: '提示词实验室',
+        subtitle: '参数调优与模板测试',
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -77,7 +77,7 @@ class _PromptLabScreenState extends ConsumerState<PromptLabScreen> {
             controller: _systemPromptController,
             maxLines: 3,
             decoration: const InputDecoration(
-              labelText: 'System Prompt Template (use {{variable}})',
+              labelText: '系统提示词模板',
               border: OutlineInputBorder(),
             ),
           ),
@@ -85,7 +85,7 @@ class _PromptLabScreenState extends ConsumerState<PromptLabScreen> {
           TextField(
             controller: _variableController,
             decoration: const InputDecoration(
-              labelText: 'Variable {{topic}} Value',
+              labelText: '变量值',
               border: OutlineInputBorder(),
             ),
           ),

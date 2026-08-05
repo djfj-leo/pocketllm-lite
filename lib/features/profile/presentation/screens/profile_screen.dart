@@ -161,12 +161,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Profile',
+        title: '个人资料',
         onBack: () => Navigator.pop(context),
         actions: [
           IconButton(
             icon: const Icon(Icons.save),
-            tooltip: 'Save',
+            tooltip: '保存',
             onPressed: () {
               // Since _saveProfile is async and returns void, we can call it directly.
               // However, typically we might want to await it if we were showing a loader.
@@ -229,7 +229,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           TextField(
             controller: _nameController,
             decoration: const InputDecoration(
-              labelText: 'Display name',
+              labelText: '显示名称',
               border: OutlineInputBorder(),
               prefixIcon: Icon(Icons.person_outline),
             ),
@@ -239,7 +239,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             controller: _bioController,
             maxLines: 3,
             decoration: const InputDecoration(
-              labelText: 'Bio / status',
+              labelText: '简介',
               border: OutlineInputBorder(),
               prefixIcon: Icon(Icons.info_outline),
               alignLabelWithHint: true,

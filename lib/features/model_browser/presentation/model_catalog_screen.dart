@@ -157,13 +157,13 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Local GGUF Models',
-        subtitle: 'Manage and run offline Cactus AI models',
+        title: '本地 GGUF 模型',
+        subtitle: '管理并运行离线模型',
         onBack: () => context.pop(),
         actions: [
           IconButton(
             icon: const Icon(Icons.help_outline_rounded),
-            tooltip: 'GGUF Local Help',
+            tooltip: '本地模型帮助',
             onPressed: () {
               HapticFeedback.lightImpact();
               context.push('/settings/model-help');
@@ -233,7 +233,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
           // Standard Catalog Models Section
           const SliverToBoxAdapter(
             child: M3SectionHeader(
-              title: 'Standard GGUF Catalog',
+              title: '标准模型目录',
             ),
           ),
           SliverList(
@@ -250,7 +250,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
           if (customModels.isNotEmpty) ...[
             const SliverToBoxAdapter(
               child: M3SectionHeader(
-                title: 'Custom Imported GGUF Models',
+                title: '自定义导入模型',
               ),
             ),
             SliverList(
@@ -494,7 +494,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
                     .triggerDownload(model.id);
               },
         icon: const Icon(Icons.download_rounded),
-        tooltip: 'Download GGUF model',
+        tooltip: '下载模型',
       );
     }
 
@@ -519,7 +519,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
             _showTestModelDialog(context, model);
           },
           icon: Icon(Icons.offline_bolt_outlined, color: colorScheme.primary),
-          tooltip: 'Test model speed & completion',
+          tooltip: '测试速度与输出',
         ),
         const SizedBox(width: 4),
         if (isLoaded)
@@ -533,7 +533,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
               foregroundColor: colorScheme.onTertiary,
             ),
             icon: const Icon(Icons.power_settings_new_rounded),
-            tooltip: 'Unload from memory',
+            tooltip: '从内存卸载',
           )
         else
           IconButton.filledTonal(
@@ -555,7 +555,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
               }
             },
             icon: const Icon(Icons.power_rounded),
-            tooltip: 'Load into memory',
+            tooltip: '加载到内存',
           ),
         const SizedBox(width: 4),
         IconButton(
@@ -564,7 +564,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
             _showDeleteConfirmDialog(context, model);
           },
           icon: Icon(Icons.delete_forever_rounded, color: colorScheme.error),
-          tooltip: 'Purge model from device',
+          tooltip: '从设备删除',
         ),
       ],
     );

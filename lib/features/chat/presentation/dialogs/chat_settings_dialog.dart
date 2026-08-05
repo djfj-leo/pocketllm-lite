@@ -40,7 +40,7 @@ class _ChatSettingsDialogState extends ConsumerState<ChatSettingsDialog> {
 
     return AlertDialog(
       title: Text(
-        'Chat Settings',
+        '对话设置',
         style: theme.textTheme.headlineSmall?.copyWith(
           fontWeight: FontWeight.bold,
         ),
@@ -51,7 +51,7 @@ class _ChatSettingsDialogState extends ConsumerState<ChatSettingsDialog> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'System Prompt',
+              '系统提示词',
               style: theme.textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: colorScheme.primary,
@@ -253,7 +253,7 @@ class _ChatSettingsDialogState extends ConsumerState<ChatSettingsDialog> {
             ),
             const SizedBox(height: 24),
             SwitchListTile(
-              title: const Text('Knowledge Base (RAG)'),
+              title: const Text('知识库(RAG)'),
               subtitle: const Text(
                 'Search and include offline documents in answers',
               ),
@@ -264,7 +264,7 @@ class _ChatSettingsDialogState extends ConsumerState<ChatSettingsDialog> {
               },
             ),
             SwitchListTile(
-              title: const Text('Native Agentic Tools'),
+              title: const Text('原生智能体工具'),
               subtitle: const Text(
                 'Allow local models to query math and system tools',
               ),
@@ -314,7 +314,7 @@ class _ChatSettingsDialogState extends ConsumerState<ChatSettingsDialog> {
 
             Navigator.pop(context);
           },
-          child: const Text('Apply Changes'),
+          child: const Text('应用更改'),
         ),
       ],
     );

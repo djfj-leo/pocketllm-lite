@@ -131,7 +131,7 @@ class _SystemPromptDetailsScreenState
           if (!isNew)
             IconButton(
               icon: Icon(Icons.delete_outline, color: theme.colorScheme.error),
-              tooltip: 'Delete Prompt',
+              tooltip: '删除提示词',
               onPressed: _deletePrompt,
             ),
           const SizedBox(width: 8),
@@ -158,7 +158,7 @@ class _SystemPromptDetailsScreenState
             TextFormField(
               controller: _titleController,
               decoration: InputDecoration(
-                labelText: 'Title',
+                labelText: '标题',
                 hintText: 'e.g., Python Expert, Creative Writer',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -196,7 +196,7 @@ class _SystemPromptDetailsScreenState
             TextFormField(
               controller: _contentController,
               decoration: InputDecoration(
-                hintText: 'You are a helpful assistant who...',
+                hintText: '你是一个有帮助的助手...',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),

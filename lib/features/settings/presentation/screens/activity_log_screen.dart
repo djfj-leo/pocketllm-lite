@@ -154,7 +154,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Activity Audit Trail',
+        title: '活动审计日志',
         onBack: () {
           if (GoRouter.of(context).canPop()) {
             context.pop();
@@ -165,12 +165,12 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.upload_file),
-            tooltip: 'Export Logs',
+            tooltip: '导出日志',
             onPressed: () => _handleExport(storage),
           ),
           IconButton(
             icon: const Icon(Icons.delete_sweep_outlined),
-            tooltip: 'Clear Logs',
+            tooltip: '清除日志',
             onPressed: () => _confirmClearLogs(context, storage),
           ),
         ],
@@ -196,7 +196,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                 TextField(
                   controller: _searchController,
                   decoration: InputDecoration(
-                    hintText: 'Search logs...',
+                    hintText: '搜索日志...',
                     prefixIcon: const Icon(Icons.search),
                     suffixIcon: _searchQuery.isNotEmpty
                         ? IconButton(

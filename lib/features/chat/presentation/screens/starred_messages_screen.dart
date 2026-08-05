@@ -25,7 +25,7 @@ class _StarredMessagesScreenState extends ConsumerState<StarredMessagesScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Starred Messages',
+        title: '收藏消息',
         onBack: () {
           if (GoRouter.of(context).canPop()) {
             context.pop();

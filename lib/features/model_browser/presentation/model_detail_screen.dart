@@ -19,7 +19,7 @@ class ModelDetailScreen extends ConsumerWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: M3AppBar(title: 'Model Details', onBack: () => context.pop()),
+      appBar: M3AppBar(title: '模型详情', onBack: () => context.pop()),
       body: detailsAsync.when(
         data: (model) {
           return CustomScrollView(

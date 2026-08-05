@@ -937,7 +937,7 @@ class _FocusedMenuOverlay extends ConsumerWidget {
           // 2. Dismiss logic
           Positioned.fill(
             child: Semantics(
-              label: 'Dismiss menu',
+              label: '关闭菜单',
               button: true,
               child: GestureDetector(
                 onTap: () => Navigator.pop(context),

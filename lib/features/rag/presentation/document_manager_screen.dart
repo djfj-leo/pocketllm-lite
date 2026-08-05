@@ -16,7 +16,7 @@ class DocumentManagerScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'RAG Documents',
+        title: 'RAG 文档',
         onBack: () {
           if (GoRouter.of(context).canPop()) {
             context.pop();

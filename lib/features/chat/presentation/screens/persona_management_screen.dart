@@ -51,12 +51,12 @@ class _PersonaManagementScreenState
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'AI Personas',
+        title: 'AI 角色',
         onBack: () => context.pop(),
         actions: [
           IconButton(
             icon: const Icon(Icons.add_rounded),
-            tooltip: 'Create Persona',
+            tooltip: '创建角色',
             onPressed: () => _showPersonaDialog(context, null),
           ),
         ],
@@ -69,7 +69,7 @@ class _PersonaManagementScreenState
           if (personas.isEmpty) {
             return const M3EmptyState(
               icon: Icons.face_retouching_natural,
-              title: 'No Personas Available',
+              title: '暂无角色',
               description:
                   'Create your first custom AI persona using the "+" button.',
             );
@@ -201,14 +201,14 @@ class _PersonaManagementScreenState
                         children: [
                           IconButton(
                             icon: const Icon(Icons.edit_outlined),
-                            tooltip: 'Edit Persona',
+                            tooltip: '编辑角色',
                             onPressed: () =>
                                 _showPersonaDialog(context, persona),
                           ),
                           if (!isSystem)
                             IconButton(
                               icon: const Icon(Icons.delete_outline_rounded),
-                              tooltip: 'Delete Persona',
+                              tooltip: '删除角色',
                               color: colorScheme.error,
                               onPressed: () async {
                                 final confirm = await showDialog<bool>(
@@ -363,7 +363,7 @@ class _PersonaManagementScreenState
                     controller: nameController,
                     textCapitalization: TextCapitalization.words,
                     decoration: InputDecoration(
-                      labelText: 'Persona Name',
+                      labelText: '角色名称',
                       hintText: 'e.g. Creative Scholar',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16),
@@ -379,7 +379,7 @@ class _PersonaManagementScreenState
                     maxLines: 4,
                     minLines: 2,
                     decoration: InputDecoration(
-                      labelText: 'System Instructions (Prompt)',
+                      labelText: '系统指令',
                       hintText:
                           'Describe how this persona should behave and answer...',
                       border: OutlineInputBorder(
@@ -502,7 +502,7 @@ class _PersonaManagementScreenState
                           borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      child: Text(isEdit ? 'Save Changes' : 'Create Persona'),
+                      child: Text(isEdit ? 'Save Changes' : '创建角色'),
                     ),
                   ),
                 ],

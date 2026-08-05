@@ -61,7 +61,7 @@ class _TagEditorDialogState extends State<TagEditorDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Manage Tags'),
+      title: const Text('管理标签'),
       content: SizedBox(
         width: double.maxFinite,
         child: Column(
@@ -93,8 +93,8 @@ class _TagEditorDialogState extends State<TagEditorDialog> {
             TextField(
               controller: _tagController,
               decoration: InputDecoration(
-                labelText: 'Add Tag',
-                hintText: 'Enter tag name',
+                labelText: '添加标签',
+                hintText: '输入标签名',
                 suffixIcon: IconButton(
                   icon: const Icon(Icons.add),
                   onPressed: () => _addTag(_tagController.text),

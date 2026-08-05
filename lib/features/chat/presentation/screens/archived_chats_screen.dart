@@ -23,7 +23,7 @@ class _ArchivedChatsScreenState extends ConsumerState<ArchivedChatsScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Archived Chats',
+        title: '已归档对话',
         onBack: () => Navigator.pop(context),
       ),
       body: ValueListenableBuilder<Box<ChatSession>>(
@@ -92,7 +92,7 @@ class _ArchivedChatsScreenState extends ConsumerState<ArchivedChatsScreen> {
                 },
                 trailing: IconButton(
                   icon: const Icon(Icons.unarchive),
-                  tooltip: 'Unarchive',
+                  tooltip: '取消归档',
                   onPressed: () async {
                     HapticFeedback.mediumImpact();
                     await storage.toggleArchive(session.id);

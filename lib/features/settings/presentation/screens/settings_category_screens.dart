@@ -34,7 +34,7 @@ class PromptsTemplatesSettingsScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Prompts & Templates',
+        title: '提示词与模板',
         subtitle: 'Configure AI personas, templates, and enhancers',
         onBack: () => Navigator.pop(context),
       ),
@@ -360,7 +360,7 @@ class _ModelsInferenceSettingsScreenState
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Models & Inference',
+        title: '模型与推理',
         subtitle: 'Configure local llama.cpp and Ollama models',
         onBack: () => Navigator.pop(context),
       ),
@@ -395,7 +395,7 @@ class _ModelsInferenceSettingsScreenState
                 children: [
                   IconButton(
                     icon: const Icon(Icons.add, size: 20),
-                    tooltip: 'Download Model',
+                    tooltip: '下载模型',
                     onPressed: () {
                       HapticFeedback.lightImpact();
                       context.push('/model-browser');
@@ -569,7 +569,7 @@ class _KnowledgeSearchSettingsScreenState
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Knowledge & Search',
+        title: '知识与搜索',
         subtitle: 'Configure offline RAG documents and search APIs',
         onBack: () => Navigator.pop(context),
       ),
@@ -607,8 +607,8 @@ class _KnowledgeSearchSettingsScreenState
             controller: _tavilyKeyController,
             obscureText: true,
             decoration: InputDecoration(
-              hintText: 'Enter your Tavily API Key (tvly-...)',
-              labelText: 'Tavily API Key',
+              hintText: '输入 Tavily API 密钥',
+              labelText: 'Tavily API 密钥',
               prefixIcon: const Icon(Icons.vpn_key_outlined),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
@@ -649,7 +649,7 @@ class _ChatsDataSettingsScreenState
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Chats & Data',
+        title: '对话与数据',
         subtitle: 'Manage local database backup and data cleanup',
         onBack: () => Navigator.pop(context),
       ),
@@ -802,7 +802,7 @@ class _AppearanceThemesSettingsScreenState
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Appearance & Themes',
+        title: '外观与主题',
         subtitle: 'Configure app theme mode, accent seed, and haptics',
         onBack: () => Navigator.pop(context),
       ),
@@ -953,7 +953,7 @@ class _SystemToolsSettingsScreenState
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'System & Diagnostics',
+        title: '系统与诊断',
         subtitle: 'Configure device updates, benchmark, and performance',
         onBack: () => Navigator.pop(context),
       ),

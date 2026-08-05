@@ -528,7 +528,7 @@ class _UpdateDialogState extends State<UpdateDialog>
                             child: ElevatedButton.icon(
                               onPressed: _startDownload,
                               icon: const Icon(Icons.download),
-                              label: const Text('Download & Install'),
+                              label: const Text('下载并安装'),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: theme.colorScheme.primary,
                                 foregroundColor: theme.colorScheme.onPrimary,
@@ -546,7 +546,7 @@ class _UpdateDialogState extends State<UpdateDialog>
                             child: ElevatedButton.icon(
                               onPressed: _openReleasePage,
                               icon: const Icon(Icons.open_in_new),
-                              label: const Text('Open GitHub Releases'),
+                              label: const Text('打开 GitHub 发布页'),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: theme.colorScheme.primary,
                                 foregroundColor: theme.colorScheme.onPrimary,

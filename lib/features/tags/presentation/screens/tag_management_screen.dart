@@ -22,7 +22,7 @@ class _TagManagementScreenState extends ConsumerState<TagManagementScreen> {
         content: TextField(
           controller: controller,
           decoration: const InputDecoration(
-            labelText: 'New tag name',
+            labelText: '新标签名',
             border: OutlineInputBorder(),
           ),
         ),
@@ -88,7 +88,7 @@ class _TagManagementScreenState extends ConsumerState<TagManagementScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Tag Management',
+        title: '标签管理',
         onBack: () => Navigator.pop(context),
       ),
       body: tags.isEmpty

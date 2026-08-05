@@ -19,7 +19,7 @@ class _TemplateManagementScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Message Templates',
+        title: '消息模板',
         onBack: () {
           if (GoRouter.of(context).canPop()) {
             context.pop();

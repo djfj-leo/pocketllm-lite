@@ -33,8 +33,8 @@ class _AudioTranscriptionScreenState extends ConsumerState<AudioTranscriptionScr
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Audio Workspace',
-        subtitle: 'Offline Speech Transcription & Summaries',
+        title: '音频工作区',
+        subtitle: '离线语音转录与摘要',
         actions: [
           if (_currentResult != null)
             IconButton(
@@ -53,7 +53,7 @@ class _AudioTranscriptionScreenState extends ConsumerState<AudioTranscriptionScr
           : _currentResult == null
               ? M3EmptyState(
                   icon: Icons.graphic_eq_rounded,
-                  title: 'No Active Audio Session',
+                  title: '无活跃音频会话',
                   description: 'Import or record an audio file to view timestamped transcriptions, meeting summaries, and extracted tasks.',
                   action: FilledButton.icon(
                     icon: const Icon(Icons.mic_rounded),

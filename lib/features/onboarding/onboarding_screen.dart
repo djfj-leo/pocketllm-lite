@@ -65,7 +65,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                         setState(() => _currentPage = index),
                     children: [
                       _buildPage(
-                        title: 'Welcome to PocketLLM',
+                        title: '欢迎使用 PocketLLM',
                         description:
                             'Your privacy-first, offline AI companion.\n\n'
                             'No data leaves your device. All computations '
@@ -76,7 +76,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                         iconColor: theme.colorScheme.onPrimaryContainer,
                       ),
                       _buildPage(
-                        title: 'Setup & Chat',
+                        title: '设置与对话',
                         description:
                             'Connect to your local Ollama server (Termux or '
                             'Desktop) and start chatting instantly.\n\n'

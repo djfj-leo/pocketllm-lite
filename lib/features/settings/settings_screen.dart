@@ -112,7 +112,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       },
       child: Scaffold(
         appBar: M3AppBar(
-          title: 'Settings',
+          title: '设置',
           onBack: () {
             if (GoRouter.of(context).canPop()) {
               context.pop();

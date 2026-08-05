@@ -25,16 +25,16 @@ class _ErrorLogScreenState extends ConsumerState<ErrorLogScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Error Log',
+        title: '错误日志',
         actions: [
           IconButton(
             icon: const Icon(Icons.ios_share_rounded),
-            tooltip: 'Export log',
+            tooltip: '导出日志',
             onPressed: _exportLog,
           ),
           IconButton(
             icon: const Icon(Icons.delete_outline_rounded),
-            tooltip: 'Clear log',
+            tooltip: '清除日志',
             onPressed: _confirmClear,
           ),
         ],
@@ -183,7 +183,7 @@ class _ErrorLogList extends ConsumerWidget {
     final selected = await showModalBottomSheet<ErrorSeverity?>(
       context: context,
       builder: (context) => _FilterSheet<ErrorSeverity>(
-        title: 'Severity',
+        title: '严重程度',
         values: ErrorSeverity.values,
         labelFor: (value) => value.label,
       ),
@@ -195,7 +195,7 @@ class _ErrorLogList extends ConsumerWidget {
     final selected = await showModalBottomSheet<ErrorCategory?>(
       context: context,
       builder: (context) => _FilterSheet<ErrorCategory>(
-        title: 'Category',
+        title: '分类',
         values: ErrorCategory.values,
         labelFor: (value) => value.name,
       ),
@@ -285,18 +285,18 @@ class _ErrorEntryTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              _DetailRow(label: 'Severity', value: entry.severity.label),
-              _DetailRow(label: 'Category', value: entry.category.name),
+              _DetailRow(label: '严重程度', value: entry.severity.label),
+              _DetailRow(label: '分类', value: entry.category.name),
               _DetailRow(
-                label: 'Time',
+                label: '时间',
                 value: entry.timestamp.toLocal().toString(),
               ),
               if (entry.details?.isNotEmpty ?? false)
-                _DetailRow(label: 'Details', value: entry.details!),
+                _DetailRow(label: '详情', value: entry.details!),
               if (entry.suggestedFix?.isNotEmpty ?? false)
-                _DetailRow(label: 'Suggested Fix', value: entry.suggestedFix!),
+                _DetailRow(label: '修复建议', value: entry.suggestedFix!),
               if (entry.stackTrace?.isNotEmpty ?? false)
-                _DetailRow(label: 'Stack Trace', value: entry.stackTrace!),
+                _DetailRow(label: '堆栈追踪', value: entry.stackTrace!),
             ],
           ),
         ),

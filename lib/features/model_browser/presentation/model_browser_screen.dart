@@ -33,7 +33,7 @@ class _ModelBrowserScreenState extends ConsumerState<ModelBrowserScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Hugging Face Models',
+        title: 'Hugging Face 模型',
         onBack: () {
           if (GoRouter.of(context).canPop()) {
             context.pop();
@@ -49,7 +49,7 @@ class _ModelBrowserScreenState extends ConsumerState<ModelBrowserScreen> {
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
-                hintText: 'Search GGUF models...',
+                hintText: '搜索 GGUF 模型...',
                 prefixIcon: const Icon(Icons.search),
                 suffixIcon: IconButton(
                   icon: const Icon(Icons.clear),

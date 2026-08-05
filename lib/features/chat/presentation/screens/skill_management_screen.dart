@@ -28,17 +28,17 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Agent Skills',
+        title: '智能体技能',
         onBack: () => context.pop(),
         actions: [
           IconButton(
             icon: const Icon(Icons.add_rounded),
-            tooltip: 'Create Skill',
+            tooltip: '创建技能',
             onPressed: () => _showSkillDialog(context, null),
           ),
           IconButton(
             icon: const Icon(Icons.download_rounded),
-            tooltip: 'Install from GitHub',
+            tooltip: '从 GitHub 安装',
             onPressed: () => _showGitHubInstallDialog(context),
           ),
         ],
@@ -51,13 +51,13 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
           if (skills.isEmpty) {
             return M3EmptyState(
               icon: Icons.extension_rounded,
-              title: 'No Skills Installed',
+              title: '暂无技能',
               description:
                   'Install agent skills via GitHub URL or build one manually.',
               action: FilledButton.icon(
                 onPressed: () => _showGitHubInstallDialog(context),
                 icon: const Icon(Icons.download_rounded),
-                label: const Text('Install from GitHub'),
+                label: const Text('从 GitHub 安装'),
               ),
             );
           }
@@ -197,7 +197,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                             children: [
                               IconButton(
                                 icon: const Icon(Icons.edit_outlined, size: 20),
-                                tooltip: 'Edit Skill',
+                                tooltip: '编辑技能',
                                 onPressed: () =>
                                     _showSkillDialog(context, skill),
                               ),
@@ -207,7 +207,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                                   color: colorScheme.error,
                                   size: 20,
                                 ),
-                                tooltip: 'Delete Skill',
+                                tooltip: '删除技能',
                                 onPressed: () async {
                                   final confirm = await showDialog<bool>(
                                     context: context,
@@ -300,7 +300,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    isEdit ? 'Edit Skill' : 'Create Agent Skill',
+                    isEdit ? '编辑技能' : 'Create Agent Skill',
                     style: theme.textTheme.headlineSmall?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -315,7 +315,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                       FilteringTextInputFormatter.allow(RegExp(r'[a-z0-9\-]')),
                     ],
                     decoration: InputDecoration(
-                      labelText: 'Skill ID (Slug)',
+                      labelText: '技能ID',
                       hintText:
                           'e.g. webdesign (kebab-case, alphanumeric, dashes)',
                       border: OutlineInputBorder(
@@ -341,7 +341,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                     controller: titleController,
                     textCapitalization: TextCapitalization.words,
                     decoration: InputDecoration(
-                      labelText: 'Title',
+                      labelText: '标题',
                       hintText: 'e.g. Web Design Expert',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(28),
@@ -367,7 +367,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                     textCapitalization: TextCapitalization.sentences,
                     maxLines: 2,
                     decoration: InputDecoration(
-                      labelText: 'Short Description',
+                      labelText: '简短描述',
                       hintText:
                           'e.g. Design gorgeous Material 3 responsive layouts',
                       border: OutlineInputBorder(
@@ -395,7 +395,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                     maxLines: 8,
                     minLines: 4,
                     decoration: InputDecoration(
-                      labelText: 'Instructions (Body)',
+                      labelText: '指令内容',
                       hintText:
                           'Detailed prompt instructions the AI should follow...',
                       alignLabelWithHint: true,
@@ -473,7 +473,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                           borderRadius: BorderRadius.circular(28),
                         ),
                       ),
-                      child: Text(isEdit ? 'Save Changes' : 'Create Skill'),
+                      child: Text(isEdit ? 'Save Changes' : '创建技能'),
                     ),
                   ),
                 ],
@@ -499,7 +499,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
             Icons.cloud_download_outlined,
             color: colorScheme.primary,
           ),
-          title: const Text('Install from GitHub'),
+          title: const Text('从 GitHub 安装'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -513,7 +513,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                 controller: urlController,
                 enabled: !_isImporting,
                 decoration: InputDecoration(
-                  labelText: 'GitHub / Raw URL',
+                  labelText: 'GitHub 链接',
                   hintText:
                       'https://github.com/user/repo/blob/main/skills/SKILL.md',
                   border: OutlineInputBorder(

@@ -26,7 +26,7 @@ class PromptManagementScreen extends ConsumerWidget {
       },
       child: Scaffold(
         appBar: M3AppBar(
-          title: 'System Prompts Library',
+          title: '系统提示词库',
           onBack: () {
             if (GoRouter.of(context).canPop()) {
               context.pop();
@@ -37,7 +37,7 @@ class PromptManagementScreen extends ConsumerWidget {
           actions: [
             IconButton(
               icon: const Icon(Icons.add),
-              tooltip: 'Add new prompt',
+              tooltip: '添加提示词',
               onPressed: () {
                 HapticFeedback.lightImpact();
                 context.go('/settings/prompts/details/new');

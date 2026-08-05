@@ -145,11 +145,11 @@ class _ChatBodyState extends ConsumerState<ChatBody> {
                 child: _showScrollToBottom
                     ? Semantics(
                         key: const ValueKey('scroll_fab'),
-                        label: 'Scroll to bottom',
+                        label: '滚动到底部',
                         button: true,
                         child: FloatingActionButton.small(
                           onPressed: _scrollToBottom,
-                          tooltip: 'Scroll to bottom',
+                          tooltip: '滚动到底部',
                           backgroundColor: colorScheme.surfaceContainerHigh,
                           foregroundColor: colorScheme.primary,
                           elevation: 3,

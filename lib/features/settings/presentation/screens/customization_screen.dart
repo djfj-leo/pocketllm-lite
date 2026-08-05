@@ -145,7 +145,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
       },
       child: Scaffold(
         appBar: M3AppBar(
-          title: 'Chat Appearance',
+          title: '对话外观',
           onBack: () {
             if (GoRouter.of(context).canPop()) {
               context.pop();
@@ -194,7 +194,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
                 children: [
                   _buildNumberStepper(
                     context,
-                    label: 'Font Size',
+                    label: '字体大小',
                     value: appearance.fontSize,
                     min: 12,
                     max: 24,
@@ -204,7 +204,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
                   const Divider(height: 24),
                   _buildNumberStepper(
                     context,
-                    label: 'Bubble Radius',
+                    label: '气泡圆角',
                     value: appearance.bubbleRadius,
                     min: 4,
                     max: 40,
@@ -215,7 +215,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
                   const Divider(height: 24),
                   _buildNumberStepper(
                     context,
-                    label: 'Padding',
+                    label: '内边距',
                     value: appearance.chatPadding,
                     min: 8,
                     max: 24,
@@ -682,7 +682,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
         children: [
           // Wheel / Custom Button
           Semantics(
-            label: 'Pick custom color',
+            label: '选择自定义颜色',
             button: true,
             child: Material(
               color: Colors.transparent,

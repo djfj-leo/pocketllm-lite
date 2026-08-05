@@ -214,7 +214,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                 controller: _searchController,
                 autofocus: true,
                 decoration: InputDecoration(
-                  hintText: 'Search chats...',
+                  hintText: '搜索对话...',
                   border: InputBorder.none,
                   hintStyle: TextStyle(
                     color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
@@ -249,7 +249,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
               leading: _isSelectionMode
                   ? IconButton(
                       icon: const Icon(Icons.close),
-                      tooltip: 'Cancel selection',
+                      tooltip: '取消选择',
                       onPressed: () {
                         HapticFeedback.lightImpact();
                         setState(() {
@@ -264,18 +264,18 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                 if (_isSelectionMode) ...[
                   IconButton(
                     icon: const Icon(Icons.label),
-                    tooltip: 'Tag selected chats',
+                    tooltip: '标记选中对话',
                     onPressed: _selectedIds.isEmpty ? null : _showBulkTagDialog,
                   ),
                   IconButton(
                     icon: const Icon(Icons.archive_outlined),
-                    tooltip: 'Archive selected chats',
+                    tooltip: '归档选中对话',
                     onPressed:
                         _selectedIds.isEmpty ? null : _archiveSelectedChats,
                   ),
                   IconButton(
                     icon: const Icon(Icons.download),
-                    tooltip: 'Export selected chats',
+                    tooltip: '导出选中对话',
                     onPressed: _selectedIds.isEmpty ? null : _exportSelected,
                   ),
                   IconButton(
@@ -283,13 +283,13 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                       Icons.delete_outline,
                       color: theme.colorScheme.error,
                     ),
-                    tooltip: 'Delete selected chats',
+                    tooltip: '删除选中对话',
                     onPressed: _selectedIds.isEmpty ? null : _deleteSelected,
                   ),
                 ] else ...[
                   IconButton(
                     icon: const Icon(Icons.search),
-                    tooltip: 'Search chats',
+                    tooltip: '搜索对话',
                     onPressed: () {
                       HapticFeedback.lightImpact();
                       setState(() {
@@ -306,17 +306,17 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                           ? theme.colorScheme.primary
                           : null,
                     ),
-                    tooltip: 'Filter chats',
+                    tooltip: '筛选对话',
                     onPressed: () => _showFilterDialog(storage),
                   ),
                   IconButton(
                     icon: const Icon(Icons.archive_outlined),
-                    tooltip: 'Archived Chats',
+                    tooltip: '已归档对话',
                     onPressed: _handleViewArchived,
                   ),
                   IconButton(
                     icon: const Icon(Icons.checklist),
-                    tooltip: 'Manage Chats',
+                    tooltip: '管理对话',
                     onPressed: () {
                       HapticFeedback.lightImpact();
                       setState(() {
@@ -416,15 +416,15 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                       _selectedTagFilter != null) {
                     return const _EmptyHistoryState(
                       icon: Icons.search_off,
-                      title: 'No results found',
-                      subtitle: 'Try adjusting your search or filters',
+                      title: '未找到结果',
+                      subtitle: '请调整搜索或筛选条件',
                     );
                   }
 
                   return _EmptyHistoryState(
                     icon: Icons.chat_bubble_outline,
-                    title: 'No chat history',
-                    subtitle: 'Start a new conversation to begin',
+                    title: '无对话记录',
+                    subtitle: '开始新对话吧',
                     action: FilledButton.icon(
                       onPressed: _handleNewChat,
                       icon: const Icon(Icons.add),
@@ -473,8 +473,8 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                     recentSessions.isEmpty) {
                   return _EmptyHistoryState(
                     icon: Icons.inventory_2_outlined,
-                    title: 'No active chats',
-                    subtitle: 'All your chats are archived',
+                    title: '无活跃对话',
+                    subtitle: '所有对话已归档',
                     action: TextButton.icon(
                       onPressed: _handleViewArchived,
                       icon: const Icon(Icons.archive_outlined),
@@ -913,7 +913,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
       trailing: !_isSelectionMode
           ? IconButton(
               icon: const Icon(Icons.chevron_right),
-              tooltip: 'Open chat',
+              tooltip: '打开对话',
               onPressed: () => _loadSession(session),
             )
           : null,
@@ -951,7 +951,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
           controller: controller,
           autofocus: true,
           decoration: const InputDecoration(
-            labelText: 'Chat Title',
+            labelText: '对话标题',
             border: OutlineInputBorder(),
           ),
         ),
@@ -1104,7 +1104,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
             TextField(
               controller: controller,
               decoration: const InputDecoration(
-                labelText: 'Tag name',
+                labelText: '标签名称',
                 border: OutlineInputBorder(),
               ),
             ),

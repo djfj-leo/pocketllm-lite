@@ -25,7 +25,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
           children: [
             DropdownButtonFormField<MemoryType>(
               initialValue: category,
-              decoration: const InputDecoration(labelText: 'Category'),
+              decoration: const InputDecoration(labelText: '分类'),
               items: MemoryType.values
                   .map((t) => DropdownMenuItem(
                         value: t,
@@ -41,7 +41,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
               controller: controller,
               maxLines: 3,
               decoration: const InputDecoration(
-                labelText: 'Fact / Instruction',
+                labelText: '内容/指令',
                 hintText: 'e.g. Prefers Python code examples with typing hints',
               ),
             ),

@@ -307,7 +307,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
             IconButton(
               icon: Icon(Icons.power_settings_new_rounded,
                   color: colorScheme.error),
-              tooltip: 'Unload Local Model',
+              tooltip: '卸载本地模型',
               onPressed: () {
                 if (ref.read(storageServiceProvider).getSetting(
                       AppConstants.hapticFeedbackKey,
@@ -326,7 +326,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
             ),
           IconButton(
             icon: const Icon(Icons.photo_library_outlined),
-            tooltip: 'Media Gallery',
+            tooltip: '媒体库',
             onPressed: () {
               final sessionId = ref.read(chatProvider).currentSessionId;
               final storage = ref.read(storageServiceProvider);
@@ -352,7 +352,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
           ),
           IconButton(
             icon: const Icon(Icons.history_rounded),
-            tooltip: 'History',
+            tooltip: '历史记录',
             onPressed: () {
               if (ref.read(storageServiceProvider).getSetting(
                     AppConstants.hapticFeedbackKey,
@@ -369,7 +369,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
           ),
           IconButton(
             icon: const Icon(Icons.add_comment_outlined),
-            tooltip: 'New Chat',
+            tooltip: '新对话',
             onPressed: () {
               if (ref.read(storageServiceProvider).getSetting(
                     AppConstants.hapticFeedbackKey,
@@ -395,7 +395,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
           ),
           IconButton(
             icon: const Icon(Icons.tune_rounded),
-            tooltip: 'Chat Settings',
+            tooltip: '对话设置',
             onPressed: () {
               if (ref.read(storageServiceProvider).getSetting(
                     AppConstants.hapticFeedbackKey,

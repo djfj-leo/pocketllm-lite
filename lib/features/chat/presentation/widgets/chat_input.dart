@@ -445,7 +445,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                   const Text('Cannot enhance prompt: Ollama not connected'),
               backgroundColor: Theme.of(context).colorScheme.error,
               action: SnackBarAction(
-                label: 'Settings',
+                label: '设置',
                 textColor: Theme.of(context).colorScheme.onError,
                 onPressed: () => context.push('/settings'),
               ),
@@ -465,7 +465,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
           ),
           duration: const Duration(seconds: 3),
           action: SnackBarAction(
-            label: 'Settings',
+            label: '设置',
             onPressed: () => context.push('/settings'),
           ),
         ),
@@ -518,7 +518,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
             duration: const Duration(seconds: 3),
             backgroundColor: Theme.of(context).colorScheme.error,
             action: SnackBarAction(
-              label: 'Settings',
+              label: '设置',
               textColor: Theme.of(context).colorScheme.onError,
               onPressed: () => context.push('/settings'),
             ),
@@ -992,7 +992,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                                 if (!isListening) ...[
                                   // 1. Beautiful Persona Picker Button (from screenshot)
                                   Semantics(
-                                    label: 'Select Persona',
+                                    label: '选择角色',
                                     button: true,
                                     child: Tooltip(
                                       message:
@@ -1033,7 +1033,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                                   // 2. Image Picker Button (with Outline style from screenshot)
                                   _InputActionButton(
                                     icon: Icons.image_outlined,
-                                    tooltip: 'Add Image',
+                                    tooltip: '添加图片',
                                     onTap: _pickImage,
                                     isDisabled: isGenerating,
                                     colorScheme: colorScheme,
@@ -1042,7 +1042,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                                   // 3. Attach File Button
                                   _InputActionButton(
                                     icon: Icons.attach_file_rounded,
-                                    tooltip: 'Attach File',
+                                    tooltip: '添加文件',
                                     onTap: _pickFile,
                                     isDisabled: isGenerating,
                                     colorScheme: colorScheme,
@@ -1051,7 +1051,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                                   // 4. Templates Button
                                   _InputActionButton(
                                     icon: Icons.bolt_rounded,
-                                    tooltip: 'Templates',
+                                    tooltip: '模板',
                                     onTap: _showTemplates,
                                     isDisabled: isGenerating,
                                     colorScheme: colorScheme,
@@ -1187,7 +1187,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                                         padding: const EdgeInsets.only(left: 4),
                                         child: _InputActionButton(
                                           icon: Icons.auto_awesome_rounded,
-                                          tooltip: 'Enhance Prompt',
+                                          tooltip: '优化提示词',
                                           onTap: _enhancePrompt,
                                           isDisabled: isDisabled,
                                           colorScheme: colorScheme,

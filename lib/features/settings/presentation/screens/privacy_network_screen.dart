@@ -205,7 +205,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                   TextField(
                     controller: _ollamaUrlController,
                     decoration: InputDecoration(
-                      labelText: 'Ollama Base URL',
+                      labelText: 'Ollama 地址',
                       suffixIcon: IconButton(
                         icon: const Icon(Icons.check_circle_rounded),
                         onPressed: () => _updateOllamaEndpoint(_ollamaUrlController.text),

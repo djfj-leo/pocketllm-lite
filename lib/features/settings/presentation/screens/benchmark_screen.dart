@@ -295,13 +295,13 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Performance Benchmark',
+        title: '性能测试',
         onBack: () => context.pop(),
         actions: [
           if (state.history.isNotEmpty && !state.isRunning)
             IconButton(
               icon: const Icon(Icons.delete_sweep_outlined),
-              tooltip: 'Clear History',
+              tooltip: '清除记录',
               onPressed: () async {
                 final confirm = await showDialog<bool>(
                   context: context,
@@ -558,7 +558,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                         controller: _customPromptController,
                         enabled: !state.isRunning,
                         decoration: InputDecoration(
-                          hintText: 'Enter custom test prompt...',
+                          hintText: '输入自定义测试提示...',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -772,7 +772,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
             state.history.isEmpty
                 ? const M3EmptyState(
                     icon: Icons.history_toggle_off,
-                    title: 'No past runs',
+                    title: '无历史记录',
                     description:
                         'Test results will be listed here after you run a benchmark.',
                   )

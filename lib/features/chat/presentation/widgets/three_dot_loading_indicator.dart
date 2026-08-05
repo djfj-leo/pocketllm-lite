@@ -56,7 +56,7 @@ class _ThreeDotLoadingIndicatorState extends State<ThreeDotLoadingIndicator>
         widget.color ?? Theme.of(context).colorScheme.onSurfaceVariant;
 
     return Semantics(
-      label: 'Loading...',
+      label: '加载中...',
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,

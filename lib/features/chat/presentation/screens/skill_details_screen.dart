@@ -19,7 +19,7 @@ class SkillDetailsScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: M3AppBar(
-        title: 'Skill Details',
+        title: '技能详情',
         onBack: () => context.pop(),
       ),
       body: ValueListenableBuilder(

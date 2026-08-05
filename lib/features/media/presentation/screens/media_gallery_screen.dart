@@ -19,7 +19,7 @@ class MediaGalleryScreen extends ConsumerWidget {
     final storage = ref.watch(storageServiceProvider);
 
     return Scaffold(
-      appBar: M3AppBar(title: 'Media Gallery', subtitle: chatTitle),
+      appBar: M3AppBar(title: '媒体库', subtitle: chatTitle),
       body: ValueListenableBuilder<Box<ChatSession>>(
         valueListenable: storage.chatBoxListenable,
         builder: (context, box, _) {
