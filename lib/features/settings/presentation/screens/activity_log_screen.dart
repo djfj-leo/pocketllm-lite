@@ -469,7 +469,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           TextButton(
             onPressed: () async {

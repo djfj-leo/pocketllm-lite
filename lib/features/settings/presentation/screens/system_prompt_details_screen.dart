@@ -95,7 +95,7 @@ class _SystemPromptDetailsScreenState
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context, true),
@@ -103,7 +103,7 @@ class _SystemPromptDetailsScreenState
               backgroundColor: Theme.of(context).colorScheme.error,
               foregroundColor: Theme.of(context).colorScheme.onError,
             ),
-            child: const Text('Delete'),
+            child: const Text('删除'),
           ),
         ],
       ),
@@ -140,7 +140,7 @@ class _SystemPromptDetailsScreenState
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _savePrompt,
         icon: const Icon(Icons.save),
-        label: const Text('Save'),
+        label: const Text('保存'),
       ),
       body: Form(
         key: _formKey,

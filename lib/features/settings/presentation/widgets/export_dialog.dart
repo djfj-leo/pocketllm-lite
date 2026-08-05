@@ -261,7 +261,7 @@ class _ExportDialogState extends ConsumerState<ExportDialog> {
       actions: [
         TextButton(
           onPressed: _isLoading ? null : () => Navigator.of(context).pop(),
-          child: const Text('Cancel'),
+          child: const Text('取消'),
         ),
         FilledButton(
           onPressed: (_isLoading ||

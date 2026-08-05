@@ -117,7 +117,7 @@ class _ModelSettingsDialogState extends ConsumerState<ModelSettingsDialog> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
         ],
       ),
@@ -244,9 +244,9 @@ class _ModelSettingsDialogState extends ConsumerState<ModelSettingsDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(),
-          child: const Text('Cancel'),
+          child: const Text('取消'),
         ),
-        FilledButton(onPressed: _saveSettings, child: const Text('Save')),
+        FilledButton(onPressed: _saveSettings, child: const Text('保存')),
       ],
     );
   }

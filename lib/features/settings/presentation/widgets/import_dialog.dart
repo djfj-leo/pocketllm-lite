@@ -139,7 +139,7 @@ class _ImportDialogState extends ConsumerState<ImportDialog> {
       actions: [
         TextButton(
           onPressed: _isLoading ? null : () => Navigator.of(context).pop(),
-          child: const Text('Cancel'),
+          child: const Text('取消'),
         ),
         if (_previewData == null)
           FilledButton.icon(

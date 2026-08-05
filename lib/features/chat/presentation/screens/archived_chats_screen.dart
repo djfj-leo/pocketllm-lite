@@ -99,7 +99,7 @@ class _ArchivedChatsScreenState extends ConsumerState<ArchivedChatsScreen> {
                     if (!context.mounted) return;
                     setState(() {}); // Refresh list to remove unarchived item
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Chat unarchived')),
+                      const SnackBar(content: Text('对话已取消归档')),
                     );
                   },
                 ),
@@ -144,21 +144,21 @@ class _ArchivedChatsScreenState extends ConsumerState<ArchivedChatsScreen> {
             const SizedBox(height: 8),
             ListTile(
               leading: const Icon(Icons.unarchive),
-              title: const Text('Unarchive Chat'),
+              title: const Text('取消归档'),
               onTap: () async {
                 Navigator.pop(sheetContext);
                 await storage.toggleArchive(session.id);
                 if (!mounted) return;
                 setState(() {}); // Refresh list to remove unarchived item
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Chat unarchived')),
+                  const SnackBar(content: Text('对话已取消归档')),
                 );
               },
             ),
             ListTile(
               leading: const Icon(Icons.open_in_new),
-              title: const Text('Open Chat'),
-              subtitle: const Text('Will unarchive automatically'),
+              title: const Text('打开对话'),
+              subtitle: const Text('打开将自动取消归档'),
               onTap: () async {
                 Navigator.pop(sheetContext);
                 // Unarchive and open
@@ -215,12 +215,12 @@ class _ArchivedChatsScreenState extends ConsumerState<ArchivedChatsScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Delete Chat?'),
-        content: const Text('This will permanently delete this chat.'),
+        title: const Text('删除对话？'),
+        content: const Text('这将永久删除此对话。'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             style: FilledButton.styleFrom(
@@ -228,7 +228,7 @@ class _ArchivedChatsScreenState extends ConsumerState<ArchivedChatsScreen> {
               foregroundColor: theme.colorScheme.onError,
             ),
             onPressed: () => Navigator.pop(context, true),
-            child: const Text('Delete'),
+            child: const Text('删除'),
           ),
         ],
       ),
@@ -240,7 +240,7 @@ class _ArchivedChatsScreenState extends ConsumerState<ArchivedChatsScreen> {
       if (mounted) {
         ScaffoldMessenger.of(
           context,
-        ).showSnackBar(const SnackBar(content: Text('Chat deleted')));
+        ).showSnackBar(const SnackBar(content: Text('对话已删除')));
       }
     }
   }

@@ -313,7 +313,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(ctx, false),
-                        child: const Text('Cancel'),
+                        child: const Text('取消'),
                       ),
                       FilledButton(
                         onPressed: () => Navigator.pop(ctx, true),

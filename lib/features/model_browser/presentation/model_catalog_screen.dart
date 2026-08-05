@@ -109,7 +109,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('OK'),
+              child: const Text('确定'),
             ),
           ],
         ),
@@ -409,7 +409,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
                             }
                           : null,
                       icon: const Icon(Icons.cancel_rounded, size: 16),
-                      label: const Text('Cancel'),
+                      label: const Text('取消'),
                       style: TextButton.styleFrom(
                         foregroundColor: colorScheme.error,
                         padding: EdgeInsets.zero,
@@ -803,7 +803,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
                     subscription?.cancel();
                     Navigator.pop(context);
                   },
-                  child: const Text('Close'),
+                  child: const Text('关闭'),
                 ),
                 FilledButton.icon(
                   onPressed: isTesting ? null : startTest,

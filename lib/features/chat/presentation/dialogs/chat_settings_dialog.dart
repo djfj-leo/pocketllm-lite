@@ -280,7 +280,7 @@ class _ChatSettingsDialogState extends ConsumerState<ChatSettingsDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text('Cancel'),
+          child: const Text('取消'),
         ),
         FilledButton.tonal(
           onPressed: () {

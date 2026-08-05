@@ -214,7 +214,7 @@ class _PersonaManagementScreenState
                                 final confirm = await showDialog<bool>(
                                   context: context,
                                   builder: (ctx) => AlertDialog(
-                                    title: const Text('Delete Persona?'),
+                                    title: const Text('删除角色？'),
                                     content: Text(
                                       'Are you sure you want to delete "${persona.name}"?',
                                     ),
@@ -222,7 +222,7 @@ class _PersonaManagementScreenState
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(ctx, false),
-                                        child: const Text('Cancel'),
+                                        child: const Text('取消'),
                                       ),
                                       FilledButton(
                                         onPressed: () =>
@@ -231,7 +231,7 @@ class _PersonaManagementScreenState
                                           backgroundColor: colorScheme.error,
                                           foregroundColor: colorScheme.onError,
                                         ),
-                                        child: const Text('Delete'),
+                                        child: const Text('删除'),
                                       ),
                                     ],
                                   ),
@@ -461,7 +461,7 @@ class _PersonaManagementScreenState
                       );
                     },
                     loading: () => const CircularProgressIndicator(),
-                    error: (_, __) => const Text('Error loading models'),
+                    error: (_, __) => const Text('加载模型出错'),
                   ),
                   const SizedBox(height: 24),
 

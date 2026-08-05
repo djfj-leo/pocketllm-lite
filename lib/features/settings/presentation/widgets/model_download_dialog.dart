@@ -197,11 +197,11 @@ class _ModelDownloadDialogState extends ConsumerState<ModelDownloadDialog> {
       ),
       actions: [
         if (_isDownloading)
-          TextButton(onPressed: _cancelDownload, child: const Text('Cancel'))
+          TextButton(onPressed: _cancelDownload, child: const Text('取消'))
         else
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('Close'),
+            child: const Text('关闭'),
           ),
         if (!_isDownloading)
           FilledButton(

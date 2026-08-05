@@ -29,7 +29,7 @@ class _TagManagementScreenState extends ConsumerState<TagManagementScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () async {
@@ -41,7 +41,7 @@ class _TagManagementScreenState extends ConsumerState<TagManagementScreen> {
               Navigator.pop(context);
               if (mounted) setState(() {});
             },
-            child: const Text('Save'),
+            child: const Text('保存'),
           ),
         ],
       ),
@@ -57,7 +57,7 @@ class _TagManagementScreenState extends ConsumerState<TagManagementScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           TextButton(
             onPressed: () async {

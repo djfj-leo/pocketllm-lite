@@ -163,7 +163,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('A/B Model Comparison'),
+        title: const Text('A/B 模型对比'),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -190,7 +190,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text('Model A'),
+                            const Text('模型 A'),
                             const SizedBox(height: 4),
                             TextField(
                               decoration: InputDecoration(hintText: _modelA),
@@ -204,7 +204,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text('Model B'),
+                            const Text('模型 B'),
                             const SizedBox(height: 4),
                             TextField(
                               decoration: InputDecoration(hintText: _modelB),

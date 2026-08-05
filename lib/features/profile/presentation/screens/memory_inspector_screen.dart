@@ -50,7 +50,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () {

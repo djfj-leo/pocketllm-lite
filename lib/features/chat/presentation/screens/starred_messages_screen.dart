@@ -197,14 +197,14 @@ class _StarredMessagesScreenState extends ConsumerState<StarredMessagesScreen> {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Chat Deleted'),
+          title: const Text('对话已删除'),
           content: const Text(
             'The chat containing this message has been deleted. Do you want to remove this bookmark?',
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('Cancel'),
+              child: const Text('取消'),
             ),
             TextButton(
               onPressed: () async {

@@ -212,7 +212,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                                   final confirm = await showDialog<bool>(
                                     context: context,
                                     builder: (ctx) => AlertDialog(
-                                      title: const Text('Delete Skill?'),
+                                      title: const Text('删除技能？'),
                                       content: Text(
                                         'Are you sure you want to delete "${skill.title}"?',
                                       ),
@@ -220,7 +220,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(ctx, false),
-                                          child: const Text('Cancel'),
+                                          child: const Text('取消'),
                                         ),
                                         FilledButton(
                                           onPressed: () =>
@@ -230,7 +230,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                                             foregroundColor:
                                                 colorScheme.onError,
                                           ),
-                                          child: const Text('Delete'),
+                                          child: const Text('删除'),
                                         ),
                                       ],
                                     ),
@@ -537,7 +537,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
             TextButton(
               onPressed:
                   _isImporting ? null : () => Navigator.pop(dialogContext),
-              child: const Text('Cancel'),
+              child: const Text('取消'),
             ),
             FilledButton(
               onPressed: _isImporting
@@ -567,7 +567,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                         );
                       }
                     },
-              child: const Text('Fetch'),
+              child: const Text('获取'),
             ),
           ],
         ),
@@ -653,7 +653,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
     showDialog(
       context: context,
       builder: (dialogContext) => AlertDialog(
-        title: const Text('Preview Skill Import'),
+        title: const Text('预览技能导入'),
         content: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -713,7 +713,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(dialogContext),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () {
@@ -729,7 +729,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                 ),
               );
             },
-            child: const Text('Install'),
+            child: const Text('安装'),
           ),
         ],
       ),

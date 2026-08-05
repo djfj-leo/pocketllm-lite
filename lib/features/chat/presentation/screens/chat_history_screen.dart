@@ -428,7 +428,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                     action: FilledButton.icon(
                       onPressed: _handleNewChat,
                       icon: const Icon(Icons.add),
-                      label: const Text('Start New Chat'),
+                      label: const Text('开始新对话'),
                     ),
                   );
                 }
@@ -478,7 +478,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                     action: TextButton.icon(
                       onPressed: _handleViewArchived,
                       icon: const Icon(Icons.archive_outlined),
-                      label: const Text('View Archived'),
+                      label: const Text('查看已归档'),
                     ),
                   );
                 }
@@ -568,7 +568,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
 
                 return FloatingActionButton.extended(
                   onPressed: _handleNewChat,
-                  label: const Text('New Chat'),
+                  label: const Text('新对话'),
                   icon: const Icon(Icons.add),
                 );
               },
@@ -594,7 +594,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Filter Chats'),
+              title: const Text('筛选对话'),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -608,12 +608,12 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                     spacing: 8,
                     children: [
                       ChoiceChip(
-                        label: const Text('Anytime'),
+                        label: const Text('任意时间'),
                         selected: tempDate == null,
                         onSelected: (val) => setState(() => tempDate = null),
                       ),
                       ChoiceChip(
-                        label: const Text('Last 7 Days'),
+                        label: const Text('最近7天'),
                         selected: tempDate != null &&
                             tempDate!.difference(DateTime.now()).inDays.abs() <
                                 8,
@@ -628,7 +628,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                         },
                       ),
                       ChoiceChip(
-                        label: const Text('Last 30 Days'),
+                        label: const Text('最近30天'),
                         selected: tempDate != null &&
                             tempDate!.difference(DateTime.now()).inDays.abs() >
                                 8,
@@ -659,7 +659,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                         vertical: 8,
                       ),
                     ),
-                    hint: const Text('All Models'),
+                    hint: const Text('所有模型'),
                     items: [
                       const DropdownMenuItem<String>(
                         value: null,
@@ -690,7 +690,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                           vertical: 8,
                         ),
                       ),
-                      hint: const Text('All Tags'),
+                      hint: const Text('所有标签'),
                       items: [
                         const DropdownMenuItem<String>(
                           value: null,
@@ -713,7 +713,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: const Text('Cancel'),
+                  child: const Text('取消'),
                 ),
                 FilledButton(
                   onPressed: () {
@@ -724,7 +724,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                     });
                     Navigator.pop(context);
                   },
-                  child: const Text('Apply'),
+                  child: const Text('应用'),
                 ),
               ],
             );
@@ -778,7 +778,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
             ),
             ListTile(
               leading: const Icon(Icons.archive_outlined),
-              title: const Text('Archive Chat'),
+              title: const Text('归档对话'),
               onTap: () async {
                 Navigator.pop(context);
                 await storage.toggleArchive(session.id);
@@ -786,12 +786,12 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                 setState(() {});
                 ScaffoldMessenger.of(
                   context,
-                ).showSnackBar(const SnackBar(content: Text('Chat archived')));
+                ).showSnackBar(const SnackBar(content: Text('对话已归档')));
               },
             ),
             ListTile(
               leading: const Icon(Icons.label_outline),
-              title: const Text('Manage Tags'),
+              title: const Text('管理标签'),
               onTap: () {
                 Navigator.pop(sheetContext);
                 showDialog(
@@ -805,7 +805,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
             ),
             ListTile(
               leading: const Icon(Icons.edit),
-              title: const Text('Rename Chat'),
+              title: const Text('重命名对话'),
               onTap: () {
                 Navigator.pop(sheetContext);
                 _showRenameDialog(session);
@@ -946,7 +946,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Rename Chat'),
+        title: const Text('重命名对话'),
         content: TextField(
           controller: controller,
           autofocus: true,
@@ -958,7 +958,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () {
@@ -970,7 +970,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
               }
               Navigator.pop(context);
             },
-            child: const Text('Save'),
+            child: const Text('保存'),
           ),
         ],
       ),
@@ -982,12 +982,12 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Delete Chat?'),
-        content: const Text('This chat will be permanently deleted.'),
+        title: const Text('删除对话？'),
+        content: const Text('此对话将被永久删除。'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             style: FilledButton.styleFrom(
@@ -995,7 +995,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
               foregroundColor: theme.colorScheme.onError,
             ),
             onPressed: () => Navigator.pop(context, true),
-            child: const Text('Delete'),
+            child: const Text('删除'),
           ),
         ],
       ),
@@ -1008,7 +1008,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
         HapticFeedback.heavyImpact();
         ScaffoldMessenger.of(
           context,
-        ).showSnackBar(const SnackBar(content: Text('Chat deleted!')));
+        ).showSnackBar(const SnackBar(content: Text('对话已删除！')));
       }
     }
   }
@@ -1035,14 +1035,14 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Delete Selected?'),
+        title: const Text('删除选中？'),
         content: Text(
           'Delete ${_selectedIds.length} chats? This cannot be undone.',
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             style: FilledButton.styleFrom(
@@ -1050,7 +1050,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
               foregroundColor: theme.colorScheme.onError,
             ),
             onPressed: () => Navigator.pop(context, true),
-            child: const Text('Delete All'),
+            child: const Text('全部删除'),
           ),
         ],
       ),
@@ -1068,7 +1068,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
         });
         HapticFeedback.heavyImpact();
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Chats deleted successfully!')),
+          const SnackBar(content: Text('对话已成功删除！')),
         );
       }
     }
@@ -1085,7 +1085,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
     });
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(const SnackBar(content: Text('Selected chats archived')));
+    ).showSnackBar(const SnackBar(content: Text('选中对话已归档')));
   }
 
   Future<void> _showBulkTagDialog() async {
@@ -1097,7 +1097,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
     final action = await showDialog<String>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Tag Selected Chats'),
+        title: const Text('标记选中对话'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -1135,15 +1135,15 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context, 'remove'),
-            child: const Text('Remove Tag'),
+            child: const Text('移除标签'),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context, 'add'),
-            child: const Text('Add Tag'),
+            child: const Text('添加标签'),
           ),
         ],
       ),

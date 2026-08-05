@@ -319,7 +319,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(dialogContext),
-                  child: const Text('Cancel'),
+                  child: const Text('取消'),
                 ),
                 FilledButton.tonal(
                   onPressed: () {
@@ -549,7 +549,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(dialogContext),
-              child: const Text('Cancel'),
+              child: const Text('取消'),
             ),
             FilledButton(
               onPressed: () {

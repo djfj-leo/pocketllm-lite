@@ -293,7 +293,7 @@ class _ChatBubbleState extends ConsumerState<ChatBubble> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
+            child: const Text('关闭'),
           ),
           FilledButton.tonal(
             onPressed: () {
@@ -1262,7 +1262,7 @@ class _FocusedMenuOverlay extends ConsumerWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () {
@@ -1273,7 +1273,7 @@ class _FocusedMenuOverlay extends ConsumerWidget {
               backgroundColor: Theme.of(context).colorScheme.error,
               foregroundColor: Theme.of(context).colorScheme.onError,
             ),
-            child: const Text('Delete'),
+            child: const Text('删除'),
           ),
         ],
       ),

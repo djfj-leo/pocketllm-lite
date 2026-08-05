@@ -58,7 +58,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child: const Text('取消'),
             ),
             FilledButton(
               onPressed: () => Navigator.pop(context, true),

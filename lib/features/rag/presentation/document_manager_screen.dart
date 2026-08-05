@@ -127,7 +127,7 @@ class DocumentManagerScreen extends ConsumerWidget {
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(ctx, false),
-                                        child: const Text('Cancel'),
+                                        child: const Text('取消'),
                                       ),
                                       FilledButton(
                                         onPressed: () =>
@@ -136,7 +136,7 @@ class DocumentManagerScreen extends ConsumerWidget {
                                           backgroundColor:
                                               theme.colorScheme.error,
                                         ),
-                                        child: const Text('Delete'),
+                                        child: const Text('删除'),
                                       ),
                                     ],
                                   ),

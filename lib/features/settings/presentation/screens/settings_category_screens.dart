@@ -321,7 +321,7 @@ class PromptsTemplatesSettingsScreen extends ConsumerWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
+            child: const Text('关闭'),
           ),
         ],
       ),
@@ -750,7 +750,7 @@ class _ChatsDataSettingsScreenState
                   actions: [
                     TextButton(
                       onPressed: () => Navigator.pop(c, false),
-                      child: const Text('Cancel'),
+                      child: const Text('取消'),
                     ),
                     TextButton(
                       onPressed: () => Navigator.pop(c, true),

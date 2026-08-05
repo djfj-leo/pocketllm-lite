@@ -78,7 +78,7 @@ class _ErrorLogScreenState extends ConsumerState<ErrorLogScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: const Text('取消'),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context, true),
@@ -303,7 +303,7 @@ class _ErrorEntryTile extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
+            child: const Text('关闭'),
           ),
         ],
       ),
