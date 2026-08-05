@@ -11,18 +11,6 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - run: |
-          python3 -c "
-          import re, sys
-          with open('pubspec.yaml') as f:
-              c = f.read()
-          c = re.sub(r'  flutter_test:\n    sdk: flutter\n', '', c)
-          with open('pubspec.yaml', 'w') as f:
-              f.write(c)
-          print('=== pubspec.yaml ===')
-          print(c)
-          "
-      - run: rm pubspec.lock
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
