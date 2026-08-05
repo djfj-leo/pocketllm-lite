@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   flutter:
+    sdk: flutter
 
   cupertino_icons: ^1.0.8
   ota_update: ^7.0.2
