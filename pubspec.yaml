@@ -49,6 +49,7 @@ dependencies:
   syncfusion_flutter_pdf: ^33.2.4
 
   flutter_localizations:
+    sdk: flutter
   waveform_flutter: 1.2.0
 
 dev_dependencies:
