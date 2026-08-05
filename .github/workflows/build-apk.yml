@@ -12,9 +12,16 @@ jobs:
         with:
           channel: 'stable'
       - run: |
-          sed -i '/^  flutter_test:/d' pubspec.yaml
-          echo "=== pubspec.yaml ==="
-          cat pubspec.yaml
+          python3 -c "
+          import re, sys
+          with open('pubspec.yaml') as f:
+              c = f.read()
+          c = re.sub(r'  flutter_test:\n    sdk: flutter\n', '', c)
+          with open('pubspec.yaml', 'w') as f:
+              f.write(c)
+          print('=== pubspec.yaml ===')
+          print(c)
+          "
       - run: rm pubspec.lock
       - run: flutter pub get
       - run: flutter build apk --release
