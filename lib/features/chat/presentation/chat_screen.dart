@@ -390,7 +390,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
                   )) {
                 HapticFeedback.selectionClick();
               }
-              context.push('/setting秒');
+              context.push('/settings');
             },
           ),
           IconButton(

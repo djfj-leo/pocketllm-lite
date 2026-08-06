@@ -159,7 +159,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
           if (GoRouter.of(context).canPop()) {
             context.pop();
           } else {
-            context.go('/setting秒');
+            context.go('/settings');
           }
         },
         actions: [
@@ -342,7 +342,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                           ),
                           onLongPress: () {
                             Clipboard.setData(
-                              ClipboardData(text: '$action: $detail秒'),
+                              ClipboardData(text: '$action: $details'),
                             );
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(

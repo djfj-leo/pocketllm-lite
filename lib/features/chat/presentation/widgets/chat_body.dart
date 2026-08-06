@@ -218,12 +218,12 @@ class _DisconnectedState extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 children: [
                   FilledButton.icon(
-                    onPressed: () => context.push('/setting秒'),
+                    onPressed: () => context.push('/settings'),
                     icon: const Icon(Icons.settings_rounded),
                     label: const Text('配置'),
                   ),
                   FilledButton.tonalIcon(
-                    onPressed: () => context.push('/settings/doc秒'),
+                    onPressed: () => context.push('/settings/docs'),
                     icon: const Icon(Icons.description_outlined),
                     label: const Text('设置指南'),
                   ),

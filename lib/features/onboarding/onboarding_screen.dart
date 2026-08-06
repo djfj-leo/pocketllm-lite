@@ -297,7 +297,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
 
       if (mounted) {
         if (shouldGoToDocs == true) {
-          context.go('/settings/doc秒');
+          context.go('/settings/docs');
         } else {
           context.go('/chat');
         }

@@ -140,7 +140,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
         if (GoRouter.of(context).canPop()) {
           context.pop();
         } else {
-          context.go('/setting秒');
+          context.go('/settings');
         }
       },
       child: Scaffold(
@@ -150,7 +150,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
             if (GoRouter.of(context).canPop()) {
               context.pop();
             } else {
-              context.go('/setting秒');
+              context.go('/settings');
             }
           },
         ),

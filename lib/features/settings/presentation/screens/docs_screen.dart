@@ -314,7 +314,7 @@ ollama pull <model-name>
           context.pop();
         } else {
           // If we can't pop, go to the settings screen directly
-          context.go('/setting秒');
+          context.go('/settings');
         }
       },
       child: Scaffold(
@@ -326,7 +326,7 @@ ollama pull <model-name>
               context.pop();
             } else {
               // If we can't pop, go to the settings screen directly
-              context.go('/setting秒');
+              context.go('/settings');
             }
           },
           bottom: TabBar(

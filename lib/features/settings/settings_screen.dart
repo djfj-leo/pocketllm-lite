@@ -490,7 +490,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 trailing: const Icon(Icons.chevron_right, size: 20),
                 onTap: () {
                   HapticFeedback.lightImpact();
-                  context.go('/settings/doc秒');
+                  context.go('/settings/docs');
                 },
               ),
               ListTile(

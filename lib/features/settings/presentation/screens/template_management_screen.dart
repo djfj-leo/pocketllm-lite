@@ -24,7 +24,7 @@ class _TemplateManagementScreenState
           if (GoRouter.of(context).canPop()) {
             context.pop();
           } else {
-            context.go('/setting秒');
+            context.go('/settings');
           }
         },
       ),

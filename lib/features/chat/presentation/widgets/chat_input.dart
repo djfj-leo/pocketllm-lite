@@ -324,14 +324,14 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                 FilledButton.tonal(
                   onPressed: () {
                     Navigator.pop(dialogContext);
-                    if (mounted) context.push('/setting秒');
+                    if (mounted) context.push('/settings');
                   },
                   child: const Text('设置'),
                 ),
                 FilledButton(
                   onPressed: () {
                     Navigator.pop(dialogContext);
-                    if (mounted) context.push('/settings/doc秒');
+                    if (mounted) context.push('/settings/docs');
                   },
                   child: const Text('设置指南'),
                 ),
@@ -447,7 +447,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
               action: SnackBarAction(
                 label: '设置',
                 textColor: Theme.of(context).colorScheme.onError,
-                onPressed: () => context.push('/setting秒'),
+                onPressed: () => context.push('/settings'),
               ),
             ),
           );
@@ -466,7 +466,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
           duration: const Duration(seconds: 3),
           action: SnackBarAction(
             label: '设置',
-            onPressed: () => context.push('/setting秒'),
+            onPressed: () => context.push('/settings'),
           ),
         ),
       );
@@ -520,7 +520,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
             action: SnackBarAction(
               label: '设置',
               textColor: Theme.of(context).colorScheme.onError,
-              onPressed: () => context.push('/setting秒'),
+              onPressed: () => context.push('/settings'),
             ),
           ),
         );
@@ -554,7 +554,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
             FilledButton(
               onPressed: () {
                 Navigator.pop(dialogContext);
-                context.push('/setting秒');
+                context.push('/settings');
               },
               child: const Text('设置'),
             ),
