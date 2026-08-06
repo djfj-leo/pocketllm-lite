@@ -158,7 +158,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                 Icons.cloud_off_rounded,
                 color: strictOffline ? theme.colorScheme.primary : theme.colorScheme.outline,
               ),
-              title: const Text('Strict Offline Mode', style: TextStyle(fontWeight: FontWeight.bold)),
+              title: const Text('严格离线模式', style: TextStyle(fontWeight: FontWeight.bold)),
               subtitle: const Text(
                 'Blocks every non-loopback connection at application level. No external network request will be permitted.',
               ),
@@ -182,7 +182,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                     children: [
                       const Icon(Icons.dns_rounded),
                       const SizedBox(width: 8),
-                      const Text('Inference Endpoint Status', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                      const Text('推理端点状态', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                       const Spacer(),
                       Chip(
                         avatar: Icon(
@@ -227,7 +227,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
           const SizedBox(height: 16),
 
           // ── Transparent Feature Permission Toggles ──
-          Text('External Connections & Services', style: theme.textTheme.titleMedium),
+          Text('外部连接与服务', style: theme.textTheme.titleMedium),
           const SizedBox(height: 8),
 
           Card(
@@ -248,7 +248,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                 const Divider(),
                 SwitchListTile(
                   secondary: const Icon(Icons.explore_rounded),
-                  title: const Text('Hugging Face Model Discovery'),
+                  title: const Text('Hugging Face 模型发现'),
                   subtitle: const Text('Allows searching and downloading GGUF models from huggingface.co'),
                   value: onlineModels,
                   onChanged: strictOffline
@@ -261,8 +261,8 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                 const Divider(),
                 SwitchListTile(
                   secondary: const Icon(Icons.search_rounded),
-                  title: const Text('Tavily Web Search'),
-                  subtitle: const Text('Sends user search queries to api.tavily.com when web search is enabled.'),
+                  title: const Text('Tavily 网页搜索'),
+                  subtitle: const Text('开启网页搜索时将用户查询发送至 api.tavily.com。'),
                   value: tavilyEnabled,
                   onChanged: strictOffline
                       ? null
@@ -288,9 +288,9 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                 ListTile(
                   leading: const Icon(Icons.font_download_off_rounded),
                   title: const Text('Network Fonts Statu秒'),
-                  subtitle: const Text('Disabled runtime fetching. Fonts are strictly bundled local assets.'),
+                  subtitle: const Text('已禁用运行时获取。字体严格使用本地内置资源。'),
                   trailing: Chip(
-                    label: const Text('Local Assets Only'),
+                    label: const Text('仅本地资源'),
                     backgroundColor: theme.colorScheme.secondaryContainer,
                   ),
                 ),
@@ -302,7 +302,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
           // ── External Connection Audit History ──
           Row(
             children: [
-              Text('Connection Audit Log', style: theme.textTheme.titleMedium),
+              Text('连接审计日志', style: theme.textTheme.titleMedium),
               const Spacer(),
               TextButton.icon(
                 icon: const Icon(Icons.refresh_rounded, size: 16),
