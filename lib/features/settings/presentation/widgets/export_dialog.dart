@@ -105,7 +105,7 @@ class _ExportDialogState extends ConsumerState<ExportDialog> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Export failed: $e'),
+            content: Text('导出失败: $e'),
             backgroundColor: Theme.of(context).colorScheme.error,
           ),
         );

@@ -306,7 +306,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                 final confirm = await showDialog<bool>(
                   context: context,
                   builder: (ctx) => AlertDialog(
-                    title: const Text('Clear Benchmark History?'),
+                    title: const Text('清除基准测试历史？'),
                     content: const Text(
                       'This will delete all past local performance logs.',
                     ),
@@ -480,7 +480,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                   child: CircularProgressIndicator(),
                 ),
               ),
-              error: (e, s) => Text('Error loading models: $e'),
+              error: (e, s) => Text('加载模型出错: $e'),
             ),
             const SizedBox(height: 16),
 
@@ -506,7 +506,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                 child: Column(
                   children: [
                     RadioListTile<String>(
-                      title: const Text('Quick Test'),
+                      title: const Text('快速测试'),
                       subtitle: const Text(
                         'Short 1-sentence prompt (approx. 10 tokens)',
                       ),
@@ -522,7 +522,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                     ),
                     const Divider(height: 1),
                     RadioListTile<String>(
-                      title: const Text('Complex Reasoning'),
+                      title: const Text('复杂推理'),
                       subtitle: const Text(
                         'Step-by-step logic puzzle (approx. 30 tokens)',
                       ),
@@ -538,7 +538,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                     ),
                     const Divider(height: 1),
                     RadioListTile<String>(
-                      title: const Text('Custom Prompt'),
+                      title: const Text('自定义提示词'),
                       subtitle: const Text(
                         'Define your own prompt to measure performance',
                       ),

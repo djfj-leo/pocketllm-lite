@@ -71,7 +71,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
     final format = await showDialog<String>(
       context: context,
       builder: (context) => SimpleDialog(
-        title: const Text('Export Activity Log秒'),
+        title: const Text('导出活动日志'),
         children: [
           SimpleDialogOption(
             onPressed: () => Navigator.pop(context, 'csv'),
@@ -84,7 +84,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                     color: theme.colorScheme.secondary,
                   ),
                   const SizedBox(width: 12),
-                  const Text('CSV (Excel/Sheets)'),
+                  const Text('CSV (Excel/电子表格)'),
                 ],
               ),
             ),
@@ -139,7 +139,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Export failed: $e'),
+            content: Text('导出失败: $e'),
             backgroundColor: Theme.of(context).colorScheme.error,
           ),
         );
@@ -462,7 +462,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Clear Audit Trail?'),
+        title: const Text('清除审计记录？'),
         content: const Text(
           'This will permanently delete your entire activity history. This action cannot be undone.',
         ),

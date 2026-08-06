@@ -297,7 +297,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
               child: Column(
                 children: [
                   SwitchListTile(
-                    title: const Text('Show Avatar秒'),
+                    title: const Text('显示头像'),
                     subtitle: const Text(
                       'Display sender icons next to messages',
                     ),
@@ -309,7 +309,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
                   ),
                   const Divider(height: 1),
                   ListTile(
-                    title: const Text('Chat Background'),
+                    title: const Text('对话背景'),
                     subtitle: const Text(
                       'Tap to set a custom background color',
                     ),
@@ -782,7 +782,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
       builder: (context) {
         Color pickerColor = currentColor;
         return AlertDialog(
-          title: const Text('Pick a color'),
+          title: const Text('选择颜色'),
           content: SingleChildScrollView(
             child: ColorPicker(
               pickerColor: pickerColor,
@@ -793,7 +793,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
           ),
           actions: [
             TextButton(
-              child: const Text('Done'),
+              child: const Text('完成'),
               onPressed: () {
                 onColorChanged(pickerColor);
                 Navigator.pop(context);

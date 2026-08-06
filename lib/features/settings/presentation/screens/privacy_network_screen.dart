@@ -47,7 +47,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
             children: [
               Icon(Icons.warning_amber_rounded, color: Theme.of(context).colorScheme.error),
               const SizedBox(width: 8),
-              const Text('Remote Endpoint Warning'),
+              const Text('远程端点警告'),
             ],
           ),
           content: Text(
@@ -62,7 +62,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
             ),
             FilledButton(
               onPressed: () => Navigator.pop(context, true),
-              child: const Text('I Trust & Confirm'),
+              child: const Text('我信任并确认'),
             ),
           ],
         ),
@@ -134,7 +134,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Privacy & Network Centre'),
+        title: const Text('隐私与网络中心'),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),

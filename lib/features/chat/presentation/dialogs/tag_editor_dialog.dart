@@ -141,7 +141,7 @@ class _TagEditorDialogState extends State<TagEditorDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text('Done'),
+          child: const Text('完成'),
         ),
       ],
     );

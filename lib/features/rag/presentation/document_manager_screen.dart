@@ -119,7 +119,7 @@ class DocumentManagerScreen extends ConsumerWidget {
                                 final confirm = await showDialog<bool>(
                                   context: context,
                                   builder: (ctx) => AlertDialog(
-                                    title: const Text('Delete Document?'),
+                                    title: const Text('删除文档？'),
                                     content: Text(
                                       'Are you sure you want to delete "${doc.title}" from your knowledge base?',
                                     ),
@@ -202,13 +202,13 @@ class DocumentManagerScreen extends ConsumerWidget {
                     if (error == null) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                          content: Text('Document successfully added!'),
+                          content: Text('文档添加成功！'),
                         ),
                       );
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text('Failed to add: $error'),
+                          content: Text('添加失败: $error'),
                           backgroundColor: Colors.red,
                         ),
                       );
@@ -217,7 +217,7 @@ class DocumentManagerScreen extends ConsumerWidget {
                 }
               },
         icon: const Icon(Icons.add),
-        label: const Text('Add Document'),
+        label: const Text('添加文档'),
       ),
     );
   }
