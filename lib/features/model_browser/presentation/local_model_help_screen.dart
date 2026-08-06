@@ -157,7 +157,7 @@ class LocalModelHelpScreen extends StatelessWidget {
                     isHeader: true, color: colorScheme.onPrimaryContainer),
                 _buildTableCell('Standalone (Cactus AI)', theme,
                     isHeader: true, color: colorScheme.onPrimaryContainer),
-                _buildTableCell('Ollama Connection', theme,
+                _buildTableCell('Ollama 连接', theme,
                     isHeader: true, color: colorScheme.onPrimaryContainer),
               ],
             ),

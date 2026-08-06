@@ -140,11 +140,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildSectionHeader('Configuration Categories'),
+        _buildSectionHeader('配置分类'),
         ListTile(
-          title: const Text('Prompts & Templates'),
+          title: const Text('提示词与模板'),
           subtitle: const Text(
-              'AI personas, custom skills, system prompts, quick templates, and enhancer'),
+              'AI角色、自定义技能、系统提示词、快速模板和提示词增强器'),
           leading: Icon(Icons.face_retouching_natural,
               color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
@@ -159,9 +159,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('Models & Inference'),
+          title: const Text('模型与推理'),
           subtitle: const Text(
-              'Manage local GGUF catalog models and configure active Ollama models'),
+              '管理本地GGUF模型目录并配置活跃的Ollama模型'),
           leading: Icon(Icons.memory_rounded, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -175,9 +175,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('Knowledge Base & Web Search'),
+          title: const Text('知识库与网页搜索'),
           subtitle: const Text(
-              'Configure RAG documents and real-time search engine settings'),
+              '配置RAG文档和实时搜索引擎设置'),
           leading: Icon(Icons.library_books, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -319,7 +319,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('Status'),
+                  const Text('状态'),
                   Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 12,
@@ -344,7 +344,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         Text(
                           (_isConnected ?? false)
                               ? 'Connected'
-                              : 'Disconnected',
+                              : '未连接',
                           style: TextStyle(
                             color: (_isConnected ?? false)
                                 ? theme.colorScheme.primary
@@ -360,7 +360,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ),
               const SizedBox(height: 16),
               Text(
-                'Endpoint URL',
+                '端点地址',
                 style: TextStyle(
                   fontSize: 12,
                   color: theme.colorScheme.onSurfaceVariant,
@@ -412,7 +412,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                                 strokeWidth: 2,
                               ),
                             )
-                          : const Text('Test Connection'),
+                          : const Text('测试连接'),
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -428,7 +428,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-                      child: const Text('Connect'),
+                      child: const Text('连接'),
                     ),
                   ),
                 ],
