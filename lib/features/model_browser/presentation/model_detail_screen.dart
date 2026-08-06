@@ -105,7 +105,7 @@ class ModelDetailScreen extends ConsumerWidget {
                       horizontal: 16.0,
                       vertical: 8.0,
                     ),
-                    child: Text('Readme', style: theme.textTheme.titleLarge),
+                    child: Text('自述文件', style: theme.textTheme.titleLarge),
                   ),
                 ),
                 SliverToBoxAdapter(
@@ -125,7 +125,7 @@ class ModelDetailScreen extends ConsumerWidget {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (e, _) => Center(child: Text('Error: $e')),
+        error: (e, _) => Center(child: Text('错误: $e')),
       ),
     );
   }
@@ -192,7 +192,7 @@ class ModelDetailScreen extends ConsumerWidget {
             );
           },
           icon: const Icon(Icons.download, size: 16),
-          label: const Text('Download'),
+          label: const Text('下载'),
           style: FilledButton.styleFrom(visualDensity: VisualDensity.compact),
         ),
       ),

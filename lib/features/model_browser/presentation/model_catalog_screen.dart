@@ -221,7 +221,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
                           foregroundColor: colorScheme.primaryContainer,
                         ),
                         icon: const Icon(Icons.file_open_rounded),
-                        label: const Text('Browse File秒'),
+                        label: const Text('浏览文件'),
                       ),
                     ],
                   ),

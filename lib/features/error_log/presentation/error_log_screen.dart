@@ -139,7 +139,7 @@ class _ErrorLogList extends ConsumerWidget {
                   onSelected: (_) => _showSeverityMenu(context),
                 ),
                 FilterChip(
-                  label: Text(categoryFilter?.name ?? 'All Categorie秒'),
+                  label: Text(categoryFilter?.name ?? '所有分类'),
                   selected: categoryFilter != null,
                   onSelected: (_) => _showCategoryMenu(context),
                 ),

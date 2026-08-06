@@ -19,7 +19,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Add Memory Entry'),
+        title: const Text('添加记忆条目'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -68,7 +68,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
                 Navigator.pop(context);
               }
             },
-            child: const Text('Save Memory'),
+            child: const Text('保存记忆'),
           ),
         ],
       ),
@@ -83,7 +83,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Local Memory Inspector'),
+        title: const Text('本地记忆检查器'),
         actions: [
           IconButton(
             icon: const Icon(Icons.add_rounded),
@@ -100,7 +100,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
             child: Row(
               children: [
                 FilterChip(
-                  label: const Text('All Categorie秒'),
+                  label: const Text('所有分类'),
                   selected: _selectedCategory == null,
                   onSelected: (_) => setState(() => _selectedCategory = null),
                 ),
@@ -124,7 +124,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
           Expanded(
             child: memories.isEmpty
                 ? const Center(
-                    child: Text('No persistent memories recorded in this category.'),
+                    child: Text('该分类下无持久记忆记录。'),
                   )
                 : ListView.separated(
                     padding: const EdgeInsets.all(16),

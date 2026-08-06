@@ -724,7 +724,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content:
-                      Text('Installed skill "${skill.title}" successfully!'),
+                      Text('技能 "${skill.title}" 安装成功！'),
                   behavior: SnackBarBehavior.floating,
                 ),
               );

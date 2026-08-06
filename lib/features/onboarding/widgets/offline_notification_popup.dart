@@ -61,7 +61,7 @@ class OfflineNotificationPopup extends StatelessWidget {
           },
         ),
         FilledButton(
-          child: const Text('I Understand'),
+          child: const Text('我了解了'),
           onPressed: () {
             Navigator.of(context).pop(false);
           },

@@ -129,7 +129,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       if (mounted) {
         ScaffoldMessenger.of(
           context,
-        ).showSnackBar(SnackBar(content: Text('Error picking image: $e')));
+        ).showSnackBar(SnackBar(content: Text('选择图片出错: $e')));
       }
     }
   }
@@ -152,7 +152,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     HapticFeedback.mediumImpact();
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(const SnackBar(content: Text('Profile updated')));
+    ).showSnackBar(const SnackBar(content: Text('个人资料已更新')));
   }
 
   @override
@@ -246,7 +246,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             ),
           ),
           const SizedBox(height: 24),
-          Text('Avatar Color (Fallback)', style: theme.textTheme.labelLarge),
+          Text('头像颜色（备用）', style: theme.textTheme.labelLarge),
           const SizedBox(height: 12),
           Wrap(
             spacing: 12,

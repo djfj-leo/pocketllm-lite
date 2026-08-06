@@ -121,7 +121,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                         FilledButton.icon(
                           onPressed: _finishOnboarding,
                           icon: const Icon(Icons.arrow_forward_rounded),
-                          label: const Text('Get Started'),
+                          label: const Text('开始使用'),
                           style: FilledButton.styleFrom(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 28,
@@ -143,7 +143,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                               vertical: 14,
                             ),
                           ),
-                          child: const Text('Next'),
+                          child: const Text('下一步'),
                         ),
                     ],
                   ),
@@ -247,7 +247,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
               children: [
                 CheckboxListTile(
                   title: const Text('Check GitHub for updates automatically?'),
-                  subtitle: const Text('Connects to api.github.com for new releases. (Default: Off)'),
+                  subtitle: const Text('连接到 api.github.com 检查新版本。(默认: 关闭)'),
                   value: autoUpdate,
                   onChanged: (val) async {
                     await storage.saveSetting(AppConstants.autoUpdateCheckKey, val ?? false);
@@ -256,7 +256,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                 ),
                 const Divider(height: 1),
                 CheckboxListTile(
-                  title: const Text('Allow optional online model browsing?'),
+                  title: const Text('允许可选的在线模型浏览？'),
                   subtitle: const Text('Enables searching Hugging Face for downloadable GGUF models.'),
                   value: onlineModels,
                   onChanged: (val) async {
@@ -266,8 +266,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                 ),
                 const Divider(height: 1),
                 SwitchListTile(
-                  title: const Text('Enable Strict Offline Mode'),
-                  subtitle: const Text('Blocks all non-loopback network calls at application level.'),
+                  title: const Text('启用严格离线模式'),
+                  subtitle: const Text('在应用层拦截所有非本地网络请求。'),
                   value: strictOffline,
                   onChanged: (val) async {
                     await storage.saveSetting(AppConstants.strictOfflineModeKey, val);
