@@ -190,7 +190,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                   Icons.camera_alt_rounded,
                   color: theme.colorScheme.primary,
                 ),
-                title: const Text('Camera'),
+                title: const Text('相机'),
                 onTap: () => Navigator.pop(context, ImageSource.camera),
               ),
               ListTile(
@@ -198,7 +198,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                   Icons.photo_library_rounded,
                   color: theme.colorScheme.primary,
                 ),
-                title: const Text('Gallery'),
+                title: const Text('相册'),
                 onTap: () => Navigator.pop(context, ImageSource.gallery),
               ),
               const SizedBox(height: 16),
@@ -248,7 +248,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text('File too large. Limit to 200KB.'),
+            content: const Text('文件过大，限制200KB。'),
             backgroundColor: Theme.of(context).colorScheme.error,
           ),
         );
@@ -311,7 +311,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                 Icons.cloud_off_rounded,
                 color: Theme.of(dialogContext).colorScheme.error,
               ),
-              title: const Text('Ollama Not Connected'),
+              title: const Text('Ollama 未连接'),
               content: const Text(
                 'Please ensure Ollama is running and connected. '
                 'Check your setup and try again.',
@@ -326,14 +326,14 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                     Navigator.pop(dialogContext);
                     if (mounted) context.push('/settings');
                   },
-                  child: const Text('Settings'),
+                  child: const Text('设置'),
                 ),
                 FilledButton(
                   onPressed: () {
                     Navigator.pop(dialogContext);
                     if (mounted) context.push('/settings/docs');
                   },
-                  child: const Text('Setup Guide'),
+                  child: const Text('设置指南'),
                 ),
               ],
             ),
@@ -442,7 +442,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content:
-                  const Text('Cannot enhance prompt: Ollama not connected'),
+                  const Text('无法增强提示词: Ollama 未连接'),
               backgroundColor: Theme.of(context).colorScheme.error,
               action: SnackBarAction(
                 label: '设置',
@@ -556,7 +556,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                 Navigator.pop(dialogContext);
                 context.push('/settings');
               },
-              child: const Text('Settings'),
+              child: const Text('设置'),
             ),
           ],
         ),

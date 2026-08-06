@@ -318,7 +318,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
                 ref.read(modelManagerProvider.notifier).unloadActiveModel();
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('Local GGUF model unloaded from memory.'),
+                    content: Text('本地GGUF模型已从内存中卸载。'),
                     behavior: SnackBarBehavior.floating,
                   ),
                 );
@@ -333,7 +333,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen>
               if (sessionId == null) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('No media yet for this chat.'),
+                    content: Text('此对话暂无媒体文件。'),
                     behavior: SnackBarBehavior.floating,
                   ),
                 );

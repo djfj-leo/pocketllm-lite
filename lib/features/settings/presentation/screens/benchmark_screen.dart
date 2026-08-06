@@ -828,7 +828,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                             children: [
                               const SizedBox(height: 4),
                               Text(
-                                'Model: ${run.modelName} (${run.promptType})',
+                                '模型: ${run.modelName} (${run.promptType})',
                               ),
                               Text(
                                 'Date: ${run.timestamp.toLocal().toString().split('.')[0]}',

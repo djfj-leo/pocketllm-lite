@@ -433,7 +433,7 @@ class _PersonaManagementScreenState
                       final items = [
                         const DropdownMenuItem<String>(
                           value: null,
-                          child: Text('No preference (use default)'),
+                          child: Text('无偏好 (使用默认)'),
                         ),
                         ...models.map(
                           (m) => DropdownMenuItem<String>(

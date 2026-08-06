@@ -372,7 +372,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                       Padding(
                         padding: const EdgeInsets.only(right: 8),
                         child: Chip(
-                          label: Text('Model: $_selectedModelFilter'),
+                          label: Text('模型: $_selectedModelFilter'),
                           onDeleted: () =>
                               setState(() => _selectedModelFilter = null),
                         ),
@@ -381,7 +381,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                       Padding(
                         padding: const EdgeInsets.only(right: 8),
                         child: Chip(
-                          label: Text('Tag: $_selectedTagFilter'),
+                          label: Text('标签: $_selectedTagFilter'),
                           onDeleted: () =>
                               setState(() => _selectedTagFilter = null),
                         ),
@@ -663,7 +663,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                     items: [
                       const DropdownMenuItem<String>(
                         value: null,
-                        child: Text('All Models'),
+                        child: Text('所有模型'),
                       ),
                       ...models.map(
                         (m) =>
@@ -694,7 +694,7 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
                       items: [
                         const DropdownMenuItem<String>(
                           value: null,
-                          child: Text('All Tags'),
+                          child: Text('所有标签'),
                         ),
                         ...tags.map(
                           (t) => DropdownMenuItem<String>(
@@ -1157,12 +1157,12 @@ class _ChatHistoryScreenState extends ConsumerState<ChatHistoryScreen> {
       if (!mounted) return;
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(SnackBar(content: Text('Tag "$tagValue" added to chats')));
+      ).showSnackBar(SnackBar(content: Text('标签 "$tagValue" 已添加到对话')));
     } else if (action == 'remove') {
       await storage.removeTagFromChats(_selectedIds, tagValue);
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Tag "$tagValue" removed from chats')),
+        SnackBar(content: Text('标签 "$tagValue" 已从对话移除')),
       );
     }
   }

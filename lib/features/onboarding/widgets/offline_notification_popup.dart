@@ -55,7 +55,7 @@ class OfflineNotificationPopup extends StatelessWidget {
       ),
       actions: <Widget>[
         TextButton(
-          child: const Text('Setup Guide'),
+          child: const Text('设置指南'),
           onPressed: () {
             Navigator.of(context).pop(true);
           },

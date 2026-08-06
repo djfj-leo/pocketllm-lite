@@ -72,12 +72,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               const SizedBox(height: 16),
               ListTile(
                 leading: const Icon(Icons.camera_alt),
-                title: const Text('Camera'),
+                title: const Text('相机'),
                 onTap: () => Navigator.pop(context, 'camera'),
               ),
               ListTile(
                 leading: const Icon(Icons.photo_library),
-                title: const Text('Gallery'),
+                title: const Text('相册'),
                 onTap: () => Navigator.pop(context, 'gallery'),
               ),
               if (_avatarImageBase64 != null)

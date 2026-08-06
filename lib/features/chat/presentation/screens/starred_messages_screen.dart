@@ -98,7 +98,7 @@ class _StarredMessagesScreenState extends ConsumerState<StarredMessagesScreen> {
                   storage.unstarMessage(item.id);
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('Message unstarred'),
+                      content: Text('已取消收藏'),
                       duration: Duration(seconds: 2),
                     ),
                   );
@@ -212,7 +212,7 @@ class _StarredMessagesScreenState extends ConsumerState<StarredMessagesScreen> {
                 final storage = ref.read(storageServiceProvider);
                 await storage.unstarMessage(item.id);
               },
-              child: const Text('Remove Bookmark'),
+              child: const Text('取消收藏'),
             ),
           ],
         ),

@@ -301,13 +301,13 @@ class _ChatBubbleState extends ConsumerState<ChatBubble> {
               Navigator.pop(context);
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text('File content copied'),
+                  content: Text('文件内容已复制'),
                   duration: Duration(seconds: 2),
                   behavior: SnackBarBehavior.floating,
                 ),
               );
             },
-            child: const Text('Copy'),
+            child: const Text('复制'),
           ),
         ],
       ),
@@ -760,7 +760,7 @@ class _ChatBubbleState extends ConsumerState<ChatBubble> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(
-                      isStarred ? 'Message unstarred' : 'Message starred',
+                      isStarred ? '已取消收藏' : 'Message starred',
                     ),
                     duration: const Duration(seconds: 1),
                     behavior: SnackBarBehavior.floating,
@@ -773,7 +773,7 @@ class _ChatBubbleState extends ConsumerState<ChatBubble> {
             ref.read(chatProvider.notifier).deleteMessage(widget.message);
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text('Message deleted'),
+                content: Text('消息已删除'),
                 duration: Duration(seconds: 2),
                 behavior: SnackBarBehavior.floating,
               ),
@@ -1155,7 +1155,7 @@ class _FocusedMenuOverlay extends ConsumerWidget {
                     Navigator.pop(context);
                     messenger.showSnackBar(
                       const SnackBar(
-                        content: Text('Message copied to clipboard'),
+                        content: Text('已复制到剪贴板'),
                         duration: Duration(seconds: 2),
                         behavior: SnackBarBehavior.floating,
                       ),
@@ -1255,7 +1255,7 @@ class _FocusedMenuOverlay extends ConsumerWidget {
           Icons.delete_outline_rounded,
           color: Theme.of(context).colorScheme.error,
         ),
-        title: const Text('Delete Message?'),
+        title: const Text('删除消息？'),
         content: const Text(
           'This message will be permanently removed from the chat.',
         ),

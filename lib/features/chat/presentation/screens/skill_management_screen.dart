@@ -431,7 +431,7 @@ class _SkillManagementScreenState extends ConsumerState<SkillManagementScreen> {
                             body.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
-                              content: Text('Please fill in all fields.'),
+                              content: Text('请填写所有字段。'),
                               behavior: SnackBarBehavior.floating,
                             ),
                           );

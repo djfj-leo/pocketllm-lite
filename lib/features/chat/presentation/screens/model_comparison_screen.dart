@@ -174,7 +174,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Benchmark Prompt', style: theme.textTheme.titleMedium),
+                  Text('基准提示词', style: theme.textTheme.titleMedium),
                   const SizedBox(height: 8),
                   TextField(
                     controller: _promptController,
@@ -236,7 +236,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
           ),
           const SizedBox(height: 16),
           if (_resultA != null && _resultB != null) ...[
-            Text('Comparison Results', style: theme.textTheme.titleMedium),
+            Text('对比结果', style: theme.textTheme.titleMedium),
             const SizedBox(height: 8),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -266,7 +266,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
           children: [
             Row(
               children: [
-                Chip(label: Text('Model $label')),
+                Chip(label: Text('模型 $label')),
                 const Spacer(),
                 if (isSelectedWinner)
                   const Icon(Icons.emoji_events_rounded, color: Colors.amber),
