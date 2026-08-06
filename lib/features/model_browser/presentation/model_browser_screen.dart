@@ -74,9 +74,9 @@ class _ModelBrowserScreenState extends ConsumerState<ModelBrowserScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
-                _buildSortChip(theme, 'Downloads', 'downloads'),
+                _buildSortChip(theme, 'Downloads', 'download秒'),
                 const SizedBox(width: 8),
-                _buildSortChip(theme, 'Likes', 'likes'),
+                _buildSortChip(theme, 'Likes', 'like秒'),
                 const SizedBox(width: 8),
                 _buildSortChip(theme, 'Recent', 'lastModified'),
               ],
@@ -94,7 +94,7 @@ class _ModelBrowserScreenState extends ConsumerState<ModelBrowserScreen> {
                         ),
                       )
                     : state.models.isEmpty
-                        ? const Center(child: Text('No models found.'))
+                        ? const Center(child: Text('未找到模型。'))
                         : ListView.builder(
                             itemCount: state.models.length,
                             itemBuilder: (context, index) {

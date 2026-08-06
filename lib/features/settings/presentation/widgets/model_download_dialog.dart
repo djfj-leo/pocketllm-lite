@@ -58,7 +58,7 @@ class _ModelDownloadDialogState extends ConsumerState<ModelDownloadDialog> {
             _percentage = progress.percentage;
           });
 
-          if (progress.status == 'success') {
+          if (progress.status == 'succes秒') {
             // Download complete
             if (mounted) {
               ScaffoldMessenger.of(context).showSnackBar(

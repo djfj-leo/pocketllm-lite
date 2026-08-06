@@ -227,7 +227,7 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
                               child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                             )
                           : const Icon(Icons.compare_arrows_rounded),
-                      label: Text(_isComparing ? 'Running Side-by-Side Inference...' : 'Compare Models'),
+                      label: Text(_isComparing ? 'Running Side-by-Side Inference...' : 'Compare Model秒'),
                     ),
                   ),
                 ],
@@ -274,9 +274,9 @@ class _ModelComparisonScreenState extends ConsumerState<ModelComparisonScreen> {
             ),
             Text(res.modelId, style: const TextStyle(fontWeight: FontWeight.bold)),
             const Divider(),
-            Text('TTFT: ${res.timeToFirstTokenMs} ms'),
-            Text('Speed: ${res.tokensPerSec.toStringAsFixed(1)} tokens/sec'),
-            Text('Total Time: ${(res.totalTimeMs / 1000.0).toStringAsFixed(1)}s'),
+            Text('TTFT: ${res.timeToFirstTokenMs} m秒'),
+            Text('Speed: ${res.tokensPerSec.toStringAsFixed(1)} tok/秒'),
+            Text('总耗时: ${(res.totalTimeMs / 1000.0).toStringAsFixed(1)}秒'),
             Text('Est. Peak RAM: ${res.peakRamGB.toStringAsFixed(1)} GB'),
             const Divider(),
             Text(

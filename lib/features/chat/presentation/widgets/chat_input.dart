@@ -324,14 +324,14 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                 FilledButton.tonal(
                   onPressed: () {
                     Navigator.pop(dialogContext);
-                    if (mounted) context.push('/settings');
+                    if (mounted) context.push('/setting秒');
                   },
                   child: const Text('设置'),
                 ),
                 FilledButton(
                   onPressed: () {
                     Navigator.pop(dialogContext);
-                    if (mounted) context.push('/settings/docs');
+                    if (mounted) context.push('/settings/doc秒');
                   },
                   child: const Text('设置指南'),
                 ),
@@ -447,7 +447,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
               action: SnackBarAction(
                 label: '设置',
                 textColor: Theme.of(context).colorScheme.onError,
-                onPressed: () => context.push('/settings'),
+                onPressed: () => context.push('/setting秒'),
               ),
             ),
           );
@@ -466,7 +466,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
           duration: const Duration(seconds: 3),
           action: SnackBarAction(
             label: '设置',
-            onPressed: () => context.push('/settings'),
+            onPressed: () => context.push('/setting秒'),
           ),
         ),
       );
@@ -503,7 +503,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
 
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Prompt enhanced!'),
+            content: Text('提示词已增强！'),
             duration: Duration(seconds: 2),
           ),
         );
@@ -520,7 +520,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
             action: SnackBarAction(
               label: '设置',
               textColor: Theme.of(context).colorScheme.onError,
-              onPressed: () => context.push('/settings'),
+              onPressed: () => context.push('/setting秒'),
             ),
           ),
         );
@@ -554,7 +554,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
             FilledButton(
               onPressed: () {
                 Navigator.pop(dialogContext);
-                context.push('/settings');
+                context.push('/setting秒');
               },
               child: const Text('设置'),
             ),
@@ -1328,7 +1328,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text('AI Limitations Disclaimer'),
+                        title: const Text('AI限制声明'),
                         content: const Text(
                           'Pocket LLM runs fully local models on your device or via secure endpoints. '
                           'Local AI can make mistakes or hallucinate. Please verify important information.',
@@ -1336,7 +1336,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.pop(context),
-                            child: const Text('Got it'),
+                            child: const Text('知道了'),
                           ),
                         ],
                       ),
@@ -1416,10 +1416,10 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                     TextButton.icon(
                       onPressed: () {
                         Navigator.pop(context);
-                        context.push('/personas');
+                        context.push('/persona秒');
                       },
                       icon: const Icon(Icons.settings_outlined, size: 16),
-                      label: const Text('Manage'),
+                      label: const Text('管理'),
                     ),
                   ],
                 ),

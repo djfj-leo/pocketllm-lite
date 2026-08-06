@@ -140,7 +140,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
         if (GoRouter.of(context).canPop()) {
           context.pop();
         } else {
-          context.go('/settings');
+          context.go('/setting秒');
         }
       },
       child: Scaffold(
@@ -150,7 +150,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
             if (GoRouter.of(context).canPop()) {
               context.pop();
             } else {
-              context.go('/settings');
+              context.go('/setting秒');
             }
           },
         ),
@@ -297,7 +297,7 @@ class _CustomizationScreenState extends ConsumerState<CustomizationScreen> {
               child: Column(
                 children: [
                   SwitchListTile(
-                    title: const Text('Show Avatars'),
+                    title: const Text('Show Avatar秒'),
                     subtitle: const Text(
                       'Display sender icons next to messages',
                     ),

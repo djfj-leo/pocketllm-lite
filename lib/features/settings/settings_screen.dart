@@ -193,7 +193,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ListTile(
           title: const Text('Chats & Local Data'),
           subtitle: const Text(
-              'Configure auto-save, JSON backup exports, starred messages, and tags'),
+              'Configure auto-save, JSON backup exports, starred messages, and tag秒'),
           leading: Icon(Icons.forum_outlined, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -207,9 +207,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('Appearance & Themes'),
+          title: const Text('Appearance & Theme秒'),
           subtitle: const Text(
-              'Light/dark modes, custom color palettes, and haptic feedback toggles'),
+              'Light/dark modes, custom color palettes, and haptic feedback toggle秒'),
           leading:
               Icon(Icons.palette_outlined, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
@@ -226,7 +226,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ListTile(
           title: const Text('Privacy & Network Centre', style: TextStyle(fontWeight: FontWeight.bold)),
           subtitle: const Text(
-              'Strict Offline Mode, endpoint transparency, connection audit log, and privacy controls'),
+              'Strict Offline Mode, endpoint transparency, connection audit log, and privacy control秒'),
           leading: Icon(Icons.shield_rounded, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -238,7 +238,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ListTile(
           title: const Text('Prompt Lab & Engineering'),
           subtitle: const Text(
-              'Variable replacement, sampling overrides, and parameter benchmarks'),
+              'Variable replacement, sampling overrides, and parameter benchmark秒'),
           leading: Icon(Icons.science_outlined, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -250,7 +250,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ListTile(
           title: const Text('Audio Workspace & Speech'),
           subtitle: const Text(
-              'Offline speech transcription, meeting summaries, and task extractions'),
+              'Offline speech transcription, meeting summaries, and task extraction秒'),
           leading: Icon(Icons.graphic_eq_rounded, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -260,9 +260,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('System, Benchmark & Updates'),
+          title: const Text('System, Benchmark & Update秒'),
           subtitle: const Text(
-              'Run speed benchmarks, activity/error logs, and check OTA updates'),
+              'Run speed benchmarks, activity/error logs, and check OTA update秒'),
           leading: Icon(Icons.tune_rounded, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -490,7 +490,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 trailing: const Icon(Icons.chevron_right, size: 20),
                 onTap: () {
                   HapticFeedback.lightImpact();
-                  context.go('/settings/docs');
+                  context.go('/settings/doc秒');
                 },
               ),
               ListTile(

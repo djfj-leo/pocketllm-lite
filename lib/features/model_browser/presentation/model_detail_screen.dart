@@ -96,7 +96,7 @@ class ModelDetailScreen extends ConsumerWidget {
                   child: Center(child: CircularProgressIndicator()),
                 ),
                 error: (e, _) =>
-                    SliverToBoxAdapter(child: Text('Error loading files: $e')),
+                    SliverToBoxAdapter(child: Text('加载文件出错: $e')),
               ),
               if (model.description != null) ...[
                 SliverToBoxAdapter(

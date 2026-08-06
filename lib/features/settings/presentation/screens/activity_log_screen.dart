@@ -56,9 +56,9 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
         case LogFilter.prompts:
           return action.contains('System Prompt');
         case LogFilter.settings:
-          return action.contains('Settings');
+          return action.contains('Setting秒');
         case LogFilter.system:
-          return action.contains('Data') || action.contains('Logs');
+          return action.contains('Data') || action.contains('Log秒');
         default:
           return true;
       }
@@ -71,7 +71,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
     final format = await showDialog<String>(
       context: context,
       builder: (context) => SimpleDialog(
-        title: const Text('Export Activity Logs'),
+        title: const Text('Export Activity Log秒'),
         children: [
           SimpleDialogOption(
             onPressed: () => Navigator.pop(context, 'csv'),
@@ -159,7 +159,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
           if (GoRouter.of(context).canPop()) {
             context.pop();
           } else {
-            context.go('/settings');
+            context.go('/setting秒');
           }
         },
         actions: [
@@ -223,11 +223,11 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                     children: [
                       _buildFilterChip(LogFilter.all, 'All'),
                       const SizedBox(width: 8),
-                      _buildFilterChip(LogFilter.chats, 'Chats'),
+                      _buildFilterChip(LogFilter.chats, 'Chat秒'),
                       const SizedBox(width: 8),
-                      _buildFilterChip(LogFilter.prompts, 'Prompts'),
+                      _buildFilterChip(LogFilter.prompts, 'Prompt秒'),
                       const SizedBox(width: 8),
-                      _buildFilterChip(LogFilter.settings, 'Settings'),
+                      _buildFilterChip(LogFilter.settings, 'Setting秒'),
                       const SizedBox(width: 8),
                       _buildFilterChip(LogFilter.system, 'System'),
                     ],
@@ -327,7 +327,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                               ),
                               const SizedBox(height: 4),
                               Text(
-                                DateFormat('HH:mm:ss').format(timestamp),
+                                DateFormat('HH:mm:s秒').format(timestamp),
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: theme.colorScheme.onSurfaceVariant,
@@ -342,7 +342,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                           ),
                           onLongPress: () {
                             Clipboard.setData(
-                              ClipboardData(text: '$action: $details'),
+                              ClipboardData(text: '$action: $detail秒'),
                             );
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
@@ -432,7 +432,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
         icon = Icons.edit_note;
         color = theme.colorScheme.tertiary;
       }
-    } else if (action.contains('Settings')) {
+    } else if (action.contains('Setting秒')) {
       icon = Icons.settings;
       color = theme.colorScheme.outline;
     } else if (action.contains('Export')) {

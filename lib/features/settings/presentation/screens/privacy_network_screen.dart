@@ -287,7 +287,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                 const Divider(),
                 ListTile(
                   leading: const Icon(Icons.font_download_off_rounded),
-                  title: const Text('Network Fonts Status'),
+                  title: const Text('Network Fonts Statu秒'),
                   subtitle: const Text('Disabled runtime fetching. Fonts are strictly bundled local assets.'),
                   trailing: Chip(
                     label: const Text('Local Assets Only'),

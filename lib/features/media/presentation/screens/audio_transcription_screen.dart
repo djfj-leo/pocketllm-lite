@@ -42,7 +42,7 @@ class _AudioTranscriptionScreenState extends ConsumerState<AudioTranscriptionScr
               onPressed: () {
                 final md = _currentResult!.exportToMarkdown();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Exported transcript (${md.length} chars) to clipboard')),
+                  SnackBar(content: Text('已导出文本 (${md.length}字符) 到剪贴板')),
                 );
               },
             ),
@@ -57,7 +57,7 @@ class _AudioTranscriptionScreenState extends ConsumerState<AudioTranscriptionScr
                   description: 'Import or record an audio file to view timestamped transcriptions, meeting summaries, and extracted tasks.',
                   action: FilledButton.icon(
                     icon: const Icon(Icons.mic_rounded),
-                    label: const Text('Start Audio Session'),
+                    label: const Text('开始音频会话'),
                     onPressed: _processSampleAudio,
                   ),
                 )
@@ -80,7 +80,7 @@ class _AudioTranscriptionScreenState extends ConsumerState<AudioTranscriptionScr
                                     style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                                   ),
                                 ),
-                                Chip(label: Text('${_currentResult!.durationSeconds}s')),
+                                Chip(label: Text('${_currentResult!.durationSeconds}秒')),
                               ],
                             ),
                             const Divider(height: 24),

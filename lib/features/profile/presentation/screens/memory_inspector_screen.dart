@@ -100,7 +100,7 @@ class _MemoryInspectorScreenState extends ConsumerState<MemoryInspectorScreen> {
             child: Row(
               children: [
                 FilterChip(
-                  label: const Text('All Categories'),
+                  label: const Text('All Categorie秒'),
                   selected: _selectedCategory == null,
                   onSelected: (_) => setState(() => _selectedCategory = null),
                 ),

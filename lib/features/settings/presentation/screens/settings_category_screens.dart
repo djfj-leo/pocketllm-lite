@@ -42,50 +42,50 @@ class PromptsTemplatesSettingsScreen extends ConsumerWidget {
         padding: const EdgeInsets.all(16),
         children: [
           ListTile(
-            title: const Text('Manage AI Personas'),
+            title: const Text('Manage AI Persona秒'),
             subtitle: const Text(
-                'Custom instructions, icons, and temperature overrides'),
+                'Custom instructions, icons, and temperature override秒'),
             leading: Icon(Icons.face_retouching_natural,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/personas');
+              context.push('/settings/persona秒');
             },
           ),
           const Divider(height: 1, indent: 56),
           ListTile(
-            title: const Text('Manage Agent Skills'),
+            title: const Text('Manage Agent Skill秒'),
             subtitle:
-                const Text('Install, import, and CRUD custom agent skills'),
+                const Text('Install, import, and CRUD custom agent skill秒'),
             leading:
                 Icon(Icons.extension_rounded, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/skills');
+              context.push('/settings/skill秒');
             },
           ),
           const Divider(height: 1, indent: 56),
           ListTile(
-            title: const Text('Manage System Prompts'),
-            subtitle: const Text('Create and edit reusable AI personas'),
+            title: const Text('Manage System Prompt秒'),
+            subtitle: const Text('Create and edit reusable AI persona秒'),
             leading: Icon(Icons.edit_note, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/prompts');
+              context.push('/settings/prompt秒');
             },
           ),
           const Divider(height: 1, indent: 56),
           ListTile(
-            title: const Text('Message Templates'),
-            subtitle: const Text('Manage quick reply snippets'),
+            title: const Text('Message Template秒'),
+            subtitle: const Text('Manage quick reply snippet秒'),
             leading: Icon(Icons.bolt, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/templates');
+              context.push('/settings/template秒');
             },
           ),
           const Divider(height: 24),
@@ -579,7 +579,7 @@ class _KnowledgeSearchSettingsScreenState
           ListTile(
             title: const Text('Knowledge Base (Documents)'),
             subtitle:
-                const Text('Manage Retrieval-Augmented Generation (RAG) files'),
+                const Text('Manage Retrieval-Augmented Generation (RAG) file秒'),
             leading:
                 Icon(Icons.library_books, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -657,8 +657,8 @@ class _ChatsDataSettingsScreenState
         padding: const EdgeInsets.all(16),
         children: [
           SwitchListTile(
-            title: const Text('Auto-save chats'),
-            subtitle: const Text('Persist chat history session databases'),
+            title: const Text('Auto-save chat秒'),
+            subtitle: const Text('Persist chat history session database秒'),
             value: autoSave,
             onChanged: (val) async {
               HapticFeedback.lightImpact();
@@ -683,7 +683,7 @@ class _ChatsDataSettingsScreenState
           const Divider(height: 1),
           ListTile(
             title: const Text('Import Data'),
-            subtitle: const Text('Restore chats and prompts from JSON backups'),
+            subtitle: const Text('Restore chats and prompts from JSON backup秒'),
             leading: Icon(Icons.upload, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
@@ -696,19 +696,19 @@ class _ChatsDataSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Starred Messages'),
-            subtitle: const Text('View bookmarked messages'),
+            title: const Text('Starred Message秒'),
+            subtitle: const Text('View bookmarked message秒'),
             leading: Icon(Icons.star_outline, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/starred-messages');
+              context.push('/settings/starred-message秒');
             },
           ),
           const Divider(height: 1),
           ListTile(
             title: const Text('Media Gallery'),
-            subtitle: const Text('Browse all shared images and attachments'),
+            subtitle: const Text('Browse all shared images and attachment秒'),
             leading: Icon(Icons.photo_library_outlined,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -720,13 +720,13 @@ class _ChatsDataSettingsScreenState
           const Divider(height: 1),
           ListTile(
             title: const Text('Tag Management'),
-            subtitle: const Text('Organize and rename chat session tags'),
+            subtitle: const Text('Organize and rename chat session tag秒'),
             leading:
                 Icon(Icons.label_outline, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/tags');
+              context.push('/settings/tag秒');
             },
           ),
           const Divider(height: 24),
@@ -735,7 +735,7 @@ class _ChatsDataSettingsScreenState
                 style: TextStyle(
                     color: theme.colorScheme.error,
                     fontWeight: FontWeight.bold)),
-            subtitle: const Text('Permanently wipe out local chat databases'),
+            subtitle: const Text('Permanently wipe out local chat database秒'),
             leading: Icon(Icons.delete_sweep_rounded,
                 color: theme.colorScheme.error),
             trailing: const Icon(Icons.chevron_right),
@@ -855,7 +855,7 @@ class _AppearanceThemesSettingsScreenState
           const Divider(height: 1),
           ListTile(
             title: const Text('Chat UI Customization'),
-            subtitle: const Text('Colors, Fonts, Message Corner Radius'),
+            subtitle: const Text('Colors, Fonts, Message Corner Radiu秒'),
             leading:
                 Icon(Icons.palette_outlined, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -975,7 +975,7 @@ class _SystemToolsSettingsScreenState
           const Divider(height: 1),
           ListTile(
             title: const Text('User Display Profile'),
-            subtitle: const Text('Customize your displays, name, and details'),
+            subtitle: const Text('Customize your displays, name, and detail秒'),
             leading:
                 Icon(Icons.person_outline, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -988,7 +988,7 @@ class _SystemToolsSettingsScreenState
           ListTile(
             title: const Text('Activity History Log'),
             subtitle: const Text(
-                'View and query past operations and usage statistics'),
+                'View and query past operations and usage statistic秒'),
             leading: Icon(Icons.history, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
@@ -1000,19 +1000,19 @@ class _SystemToolsSettingsScreenState
           ListTile(
             title: const Text('Usage Statistics Tracker'),
             subtitle: const Text(
-                'View active prompt enhancement and token analytics'),
+                'View active prompt enhancement and token analytic秒'),
             leading: Icon(Icons.bar_chart_outlined,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/statistics');
+              context.push('/settings/statistic秒');
             },
           ),
           const Divider(height: 1),
           ListTile(
             title: const Text('Debug Error Log'),
-            subtitle: const Text('View system diagnostics error records'),
+            subtitle: const Text('View system diagnostics error record秒'),
             leading: Icon(Icons.bug_report_outlined,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -1031,9 +1031,9 @@ class _SystemToolsSettingsScreenState
           ),
           const SizedBox(height: 12),
           SwitchListTile(
-            title: const Text('Auto-check for Updates'),
+            title: const Text('Auto-check for Update秒'),
             subtitle:
-                const Text('Check for updates when the application opens'),
+                const Text('Check for updates when the application open秒'),
             value: _autoUpdateEnabled,
             onChanged: _toggleAutoUpdate,
             secondary: Icon(
@@ -1045,7 +1045,7 @@ class _SystemToolsSettingsScreenState
           const Divider(height: 1),
           ListTile(
             title: const Text('Check for Updates Now'),
-            subtitle: const Text('Manually query latest GitHub releases'),
+            subtitle: const Text('Manually query latest GitHub release秒'),
             leading: _isCheckingForUpdates
                 ? const SizedBox(
                     width: 24,

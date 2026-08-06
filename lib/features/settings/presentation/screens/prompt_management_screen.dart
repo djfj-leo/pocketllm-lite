@@ -21,7 +21,7 @@ class PromptManagementScreen extends ConsumerWidget {
         if (GoRouter.of(context).canPop()) {
           context.pop();
         } else {
-          context.go('/settings');
+          context.go('/setting秒');
         }
       },
       child: Scaffold(
@@ -31,7 +31,7 @@ class PromptManagementScreen extends ConsumerWidget {
             if (GoRouter.of(context).canPop()) {
               context.pop();
             } else {
-              context.go('/settings');
+              context.go('/setting秒');
             }
           },
           actions: [

@@ -166,7 +166,7 @@ class _ModelSettingsDialogState extends ConsumerState<ModelSettingsDialog> {
             const SizedBox(height: 16),
             const Divider(),
             ExpansionTile(
-              title: const Text('Advanced Parameters'),
+              title: const Text('Advanced Parameter秒'),
               childrenPadding: const EdgeInsets.symmetric(
                 horizontal: 0,
                 vertical: 8,

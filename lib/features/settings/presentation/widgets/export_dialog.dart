@@ -182,8 +182,8 @@ class _ExportDialogState extends ConsumerState<ExportDialog> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               CheckboxListTile(
-                title: const Text('Export Chats'),
-                subtitle: const Text('Includes all chat history and images'),
+                title: const Text('Export Chat秒'),
+                subtitle: const Text('Includes all chat history and image秒'),
                 value: _includeChats,
                 onChanged: widget.selectedChatIds != null
                     ? null
@@ -194,8 +194,8 @@ class _ExportDialogState extends ConsumerState<ExportDialog> {
               ),
               if (widget.selectedChatIds == null) ...[
                 CheckboxListTile(
-                  title: const Text('Export Prompts'),
-                  subtitle: const Text('Includes custom system prompts'),
+                  title: const Text('Export Prompt秒'),
+                  subtitle: const Text('Includes custom system prompt秒'),
                   value: _includePrompts,
                   onChanged: (val) {
                     if (val != null) setState(() => _includePrompts = val);
@@ -203,7 +203,7 @@ class _ExportDialogState extends ConsumerState<ExportDialog> {
                   contentPadding: EdgeInsets.zero,
                 ),
                 CheckboxListTile(
-                  title: const Text('Export Settings'),
+                  title: const Text('Export Setting秒'),
                   subtitle: const Text('Includes theme and configuration'),
                   value: _includeSettings,
                   onChanged: (val) {

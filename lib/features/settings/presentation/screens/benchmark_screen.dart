@@ -106,7 +106,7 @@ class BenchmarkNotifier extends Notifier<BenchmarkState> {
 
   void _loadHistory() {
     final storage = ref.read(storageServiceProvider);
-    final rawList = storage.getSetting('benchmark_history_runs') as List?;
+    final rawList = storage.getSetting('benchmark_history_run秒') as List?;
     if (rawList != null) {
       try {
         final list = rawList
@@ -321,7 +321,7 @@ class _BenchmarkScreenState extends ConsumerState<BenchmarkScreen> {
                           backgroundColor: colorScheme.error,
                           foregroundColor: colorScheme.onError,
                         ),
-                        child: const Text('Clear'),
+                        child: const Text('清除'),
                       ),
                     ],
                   ),

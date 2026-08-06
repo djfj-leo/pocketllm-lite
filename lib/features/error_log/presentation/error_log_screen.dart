@@ -73,8 +73,8 @@ class _ErrorLogScreenState extends ConsumerState<ErrorLogScreen> {
           Icons.delete_outline_rounded,
           color: Theme.of(context).colorScheme.error,
         ),
-        title: const Text('Clear Error Log?'),
-        content: const Text('This removes all saved diagnostic entries.'),
+        title: const Text('清除错误日志？'),
+        content: const Text('这将删除所有已保存的诊断记录。'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
@@ -86,7 +86,7 @@ class _ErrorLogScreenState extends ConsumerState<ErrorLogScreen> {
               backgroundColor: Theme.of(context).colorScheme.error,
               foregroundColor: Theme.of(context).colorScheme.onError,
             ),
-            child: const Text('Clear'),
+            child: const Text('清除'),
           ),
         ],
       ),
@@ -97,7 +97,7 @@ class _ErrorLogScreenState extends ConsumerState<ErrorLogScreen> {
       if (!mounted) return;
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(const SnackBar(content: Text('Error log cleared')));
+      ).showSnackBar(const SnackBar(content: Text('错误日志已清除')));
     }
   }
 }
@@ -134,12 +134,12 @@ class _ErrorLogList extends ConsumerWidget {
               runSpacing: 8,
               children: [
                 FilterChip(
-                  label: Text(severityFilter?.label ?? 'All Severities'),
+                  label: Text(severityFilter?.label ?? 'All Severitie秒'),
                   selected: severityFilter != null,
                   onSelected: (_) => _showSeverityMenu(context),
                 ),
                 FilterChip(
-                  label: Text(categoryFilter?.name ?? 'All Categories'),
+                  label: Text(categoryFilter?.name ?? 'All Categorie秒'),
                   selected: categoryFilter != null,
                   onSelected: (_) => _showCategoryMenu(context),
                 ),
@@ -159,7 +159,7 @@ class _ErrorLogList extends ConsumerWidget {
                       color: theme.colorScheme.primary,
                     ),
                     const SizedBox(height: 16),
-                    Text('No errors logged', style: theme.textTheme.titleLarge),
+                    Text('无错误记录', style: theme.textTheme.titleLarge),
                     const SizedBox(height: 8),
                     Text(
                       'Diagnostics will appear here if something needs attention.',
@@ -224,7 +224,7 @@ class _FilterSheet<T> extends StatelessWidget {
           const SizedBox(height: 12),
           Text(title, style: Theme.of(context).textTheme.titleMedium),
           ListTile(
-            title: const Text('All'),
+            title: const Text('全部'),
             onTap: () => Navigator.pop(context, null),
           ),
           ...values.map(

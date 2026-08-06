@@ -91,7 +91,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Imported "$name" successfully!'),
+            content: Text('已成功导入 "$name"！'),
             backgroundColor: Theme.of(context).colorScheme.primary,
             behavior: SnackBarBehavior.floating,
           ),
@@ -104,7 +104,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
         builder: (context) => AlertDialog(
           icon: Icon(Icons.error_outline_rounded,
               color: Theme.of(context).colorScheme.error),
-          title: const Text('Import Failed'),
+          title: const Text('导入失败'),
           content: Text(e.toString()),
           actions: [
             TextButton(
@@ -221,7 +221,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
                           foregroundColor: colorScheme.primaryContainer,
                         ),
                         icon: const Icon(Icons.file_open_rounded),
-                        label: const Text('Browse Files'),
+                        label: const Text('Browse File秒'),
                       ),
                     ],
                   ),
@@ -581,14 +581,14 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
       builder: (context) => AlertDialog(
         icon: Icon(Icons.delete_sweep_rounded,
             color: colorScheme.error, size: 28),
-        title: const Text('Purge Model File?'),
+        title: const Text('彻底删除模型文件？'),
         content: Text(
           'This will permanently delete "${model.name}" and release ${model.formattedSize} of disk space. You will have to redownload or re-import the file if needed again.',
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Keep File'),
+            child: const Text('保留文件'),
           ),
           FilledButton(
             onPressed: () {
@@ -599,7 +599,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
               backgroundColor: colorScheme.error,
               foregroundColor: colorScheme.onError,
             ),
-            child: const Text('Purge permanently'),
+            child: const Text('永久删除'),
           ),
         ],
       ),
@@ -697,7 +697,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
             return AlertDialog(
               icon: Icon(Icons.offline_bolt_rounded,
                   color: colorScheme.primary, size: 32),
-              title: Text('Test "${model.name}"'),
+              title: Text('测试 "${model.name}"'),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -808,7 +808,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
                 FilledButton.icon(
                   onPressed: isTesting ? null : startTest,
                   icon: const Icon(Icons.play_arrow_rounded),
-                  label: const Text('Run Inference Test'),
+                  label: const Text('运行推理测试'),
                 ),
               ],
             );
@@ -833,7 +833,7 @@ class _ModelDetailsSheetContent extends ConsumerWidget {
     final state = ref.watch(modelManagerProvider);
     final model = state.models[modelId];
     if (model == null) {
-      return const Center(child: Text('Model not found'));
+      return const Center(child: Text('未找到模型'));
     }
 
     final theme = Theme.of(context);
@@ -1228,7 +1228,7 @@ class _ModelDetailsSheetContent extends ConsumerWidget {
                       context); // Close details sheet to show catalog progress
                 },
           icon: const Icon(Icons.download_rounded),
-          label: const Text('Download Model File'),
+          label: const Text('下载模型文件'),
         ),
       );
     }
@@ -1275,7 +1275,7 @@ class _ModelDetailsSheetContent extends ConsumerWidget {
                 side: BorderSide(color: colorScheme.error),
               ),
               icon: const Icon(Icons.cancel_rounded),
-              label: const Text('Cancel Download'),
+              label: const Text('取消下载'),
             ),
           ),
         ],

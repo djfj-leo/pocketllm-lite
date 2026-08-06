@@ -25,7 +25,7 @@ class TemplatesSheet extends ConsumerWidget {
           return const Center(
             child: Padding(
               padding: EdgeInsets.all(32.0),
-              child: Text('No templates yet'),
+              child: Text('暂无模板'),
             ),
           );
         }
