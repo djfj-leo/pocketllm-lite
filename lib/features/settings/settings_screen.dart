@@ -260,9 +260,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('System, Benchmark & Update秒'),
+          title: const Text('系统、基准测试与更新'),
           subtitle: const Text(
-              'Run speed benchmarks, activity/error logs, and check OTA update秒'),
+              '运行速度基准测试、活动/错误日志，以及检查OTA更新'),
           leading: Icon(Icons.tune_rounded, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
