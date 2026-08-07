@@ -191,9 +191,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('Chats & Local Data'),
+          title: const Text('对话与本地数据'),
           subtitle: const Text(
-              'Configure auto-save, JSON backup exports, starred messages, and tag秒'),
+              '配置自动保存、JSON备份导出、收藏消息和标签'),
           leading: Icon(Icons.forum_outlined, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -207,9 +207,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('Appearance & Theme秒'),
+          title: const Text('外观与主题'),
           subtitle: const Text(
-              'Light/dark modes, custom color palettes, and haptic feedback toggle秒'),
+              '浅色/深色模式、自定义调色板和触觉反馈开关'),
           leading:
               Icon(Icons.palette_outlined, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
@@ -226,7 +226,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ListTile(
           title: const Text('Privacy & Network Centre', style: TextStyle(fontWeight: FontWeight.bold)),
           subtitle: const Text(
-              'Strict Offline Mode, endpoint transparency, connection audit log, and privacy control秒'),
+              '严格离线模式、端点透明度、连接审计日志和隐私控制'),
           leading: Icon(Icons.shield_rounded, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -236,9 +236,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('Prompt Lab & Engineering'),
+          title: const Text('提示词实验室与工程'),
           subtitle: const Text(
-              'Variable replacement, sampling overrides, and parameter benchmark秒'),
+              '变量替换、采样覆盖和参数基准测试'),
           leading: Icon(Icons.science_outlined, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
@@ -248,9 +248,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ),
         const Divider(height: 1, indent: 56),
         ListTile(
-          title: const Text('Audio Workspace & Speech'),
+          title: const Text('音频工作区与语音'),
           subtitle: const Text(
-              'Offline speech transcription, meeting summaries, and task extraction秒'),
+              '离线语音转录、会议摘要和任务提取'),
           leading: Icon(Icons.graphic_eq_rounded, color: theme.colorScheme.primary),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
