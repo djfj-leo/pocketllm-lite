@@ -106,7 +106,7 @@ class BenchmarkNotifier extends Notifier<BenchmarkState> {
 
   void _loadHistory() {
     final storage = ref.read(storageServiceProvider);
-    final rawList = storage.getSetting('benchmark_history_run秒') as List?;
+    final rawList = storage.getSetting('benchmark_history_runs') as List?;
     if (rawList != null) {
       try {
         final list = rawList

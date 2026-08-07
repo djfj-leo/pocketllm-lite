@@ -47,7 +47,7 @@ class MediaGalleryScreen extends ConsumerWidget {
           if (mediaItems.isEmpty) {
             return Center(
               child: Text(
-                'No images yet.',
+                '暂无图片。',
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
             );

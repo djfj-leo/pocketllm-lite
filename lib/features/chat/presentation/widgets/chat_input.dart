@@ -313,7 +313,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
               ),
               title: const Text('Ollama 未连接'),
               content: const Text(
-                'Please ensure Ollama is running and connected. '
+                '请确保Ollama正在运行并已连接。'
                 'Check your setup and try again.',
               ),
               actions: [
@@ -461,7 +461,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text(
-            'Select a Prompt Enhancer model in Settings first.',
+            '请先在设置中选择提示词增强器模型。',
           ),
           duration: const Duration(seconds: 3),
           action: SnackBarAction(
@@ -1408,7 +1408,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Select AI Persona',
+                      '选择AI角色',
                       style: theme.textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -1416,7 +1416,7 @@ class _ChatInputState extends ConsumerState<ChatInput> {
                     TextButton.icon(
                       onPressed: () {
                         Navigator.pop(context);
-                        context.push('/persona秒');
+                        context.push('/personas');
                       },
                       icon: const Icon(Icons.settings_outlined, size: 16),
                       label: const Text('管理'),

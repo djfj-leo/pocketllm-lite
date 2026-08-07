@@ -74,9 +74,9 @@ class _ModelBrowserScreenState extends ConsumerState<ModelBrowserScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
-                _buildSortChip(theme, 'Downloads', 'download秒'),
+                _buildSortChip(theme, 'Downloads', 'downloads'),
                 const SizedBox(width: 8),
-                _buildSortChip(theme, 'Likes', 'like秒'),
+                _buildSortChip(theme, 'Likes', 'likes'),
                 const SizedBox(width: 8),
                 _buildSortChip(theme, 'Recent', 'lastModified'),
               ],

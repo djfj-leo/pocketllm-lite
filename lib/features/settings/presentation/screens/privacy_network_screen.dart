@@ -287,7 +287,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
                 const Divider(),
                 ListTile(
                   leading: const Icon(Icons.font_download_off_rounded),
-                  title: const Text('Network Fonts Statu秒'),
+                  title: const Text('Network Fonts Status'),
                   subtitle: const Text('已禁用运行时获取。字体严格使用本地内置资源。'),
                   trailing: Chip(
                     label: const Text('仅本地资源'),
@@ -376,7 +376,7 @@ class _PrivacyNetworkScreenState extends ConsumerState<PrivacyNetworkScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                strict ? 'Strict Offline Mode Active' : 'Local-First Inference Active',
+                strict ? '严格离线模式已激活' : '本地优先推理已激活',
                 style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 2),

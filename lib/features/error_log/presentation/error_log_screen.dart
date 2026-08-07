@@ -134,7 +134,7 @@ class _ErrorLogList extends ConsumerWidget {
               runSpacing: 8,
               children: [
                 FilterChip(
-                  label: Text(severityFilter?.label ?? 'All Severitie秒'),
+                  label: Text(severityFilter?.label ?? 'All Severities'),
                   selected: severityFilter != null,
                   onSelected: (_) => _showSeverityMenu(context),
                 ),

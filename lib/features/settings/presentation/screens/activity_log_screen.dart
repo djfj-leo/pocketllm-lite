@@ -56,9 +56,9 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
         case LogFilter.prompts:
           return action.contains('System Prompt');
         case LogFilter.settings:
-          return action.contains('Setting秒');
+          return action.contains('Settings');
         case LogFilter.system:
-          return action.contains('Data') || action.contains('Log秒');
+          return action.contains('Data') || action.contains('Logs');
         default:
           return true;
       }
@@ -223,11 +223,11 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                     children: [
                       _buildFilterChip(LogFilter.all, 'All'),
                       const SizedBox(width: 8),
-                      _buildFilterChip(LogFilter.chats, 'Chat秒'),
+                      _buildFilterChip(LogFilter.chats, 'Chats'),
                       const SizedBox(width: 8),
-                      _buildFilterChip(LogFilter.prompts, 'Prompt秒'),
+                      _buildFilterChip(LogFilter.prompts, 'Prompts'),
                       const SizedBox(width: 8),
-                      _buildFilterChip(LogFilter.settings, 'Setting秒'),
+                      _buildFilterChip(LogFilter.settings, 'Settings'),
                       const SizedBox(width: 8),
                       _buildFilterChip(LogFilter.system, 'System'),
                     ],
@@ -327,7 +327,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
                               ),
                               const SizedBox(height: 4),
                               Text(
-                                DateFormat('HH:mm:s秒').format(timestamp),
+                                DateFormat('HH:mm:ss').format(timestamp),
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: theme.colorScheme.onSurfaceVariant,
@@ -432,7 +432,7 @@ class _ActivityLogScreenState extends ConsumerState<ActivityLogScreen> {
         icon = Icons.edit_note;
         color = theme.colorScheme.tertiary;
       }
-    } else if (action.contains('Setting秒')) {
+    } else if (action.contains('Settings')) {
       icon = Icons.settings;
       color = theme.colorScheme.outline;
     } else if (action.contains('Export')) {

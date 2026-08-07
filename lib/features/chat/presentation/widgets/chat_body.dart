@@ -197,7 +197,7 @@ class _DisconnectedState extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               Text(
-                'Not Connected',
+                '未连接',
                 style: theme.textTheme.headlineSmall?.copyWith(
                   color: colorScheme.onSurface,
                   fontWeight: FontWeight.bold,
@@ -205,7 +205,7 @@ class _DisconnectedState extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Please ensure Ollama is running and connected',
+                '请确保Ollama正在运行并已连接',
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: colorScheme.onSurfaceVariant,
                 ),

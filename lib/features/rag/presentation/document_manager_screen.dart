@@ -49,7 +49,7 @@ class DocumentManagerScreen extends ConsumerWidget {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            'No documents added yet.',
+                            '尚未添加文档。',
                             style: theme.textTheme.titleMedium?.copyWith(
                               color: theme.colorScheme.onSurfaceVariant,
                             ),

@@ -107,7 +107,7 @@ class _TagManagementScreenState extends ConsumerState<TagManagementScreen> {
                 return ListTile(
                   leading: const Icon(Icons.label),
                   title: Text(tag),
-                  subtitle: Text('$count chat秒'),
+                  subtitle: Text('$count chats'),
                   trailing: PopupMenuButton<String>(
                     onSelected: (value) {
                       if (value == 'rename') {

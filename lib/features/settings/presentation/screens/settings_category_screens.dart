@@ -42,57 +42,57 @@ class PromptsTemplatesSettingsScreen extends ConsumerWidget {
         padding: const EdgeInsets.all(16),
         children: [
           ListTile(
-            title: const Text('Manage AI Persona秒'),
+            title: const Text('管理AI角色'),
             subtitle: const Text(
-                'Custom instructions, icons, and temperature override秒'),
+                '自定义指令、图标和温度覆盖'),
             leading: Icon(Icons.face_retouching_natural,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/persona秒');
+              context.push('/settings/personas');
             },
           ),
           const Divider(height: 1, indent: 56),
           ListTile(
-            title: const Text('Manage Agent Skill秒'),
+            title: const Text('管理智能体技能'),
             subtitle:
-                const Text('Install, import, and CRUD custom agent skill秒'),
+                const Text('安装、导入和管理自定义智能体技能'),
             leading:
                 Icon(Icons.extension_rounded, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/skill秒');
+              context.push('/settings/skills');
             },
           ),
           const Divider(height: 1, indent: 56),
           ListTile(
-            title: const Text('Manage System Prompt秒'),
-            subtitle: const Text('Create and edit reusable AI persona秒'),
+            title: const Text('管理系统提示词'),
+            subtitle: const Text('创建和编辑可复用的AI角色'),
             leading: Icon(Icons.edit_note, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/prompt秒');
+              context.push('/settings/prompts');
             },
           ),
           const Divider(height: 1, indent: 56),
           ListTile(
-            title: const Text('Message Template秒'),
-            subtitle: const Text('Manage quick reply snippet秒'),
+            title: const Text('消息模板'),
+            subtitle: const Text('管理快速回复片段'),
             leading: Icon(Icons.bolt, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/template秒');
+              context.push('/settings/templates');
             },
           ),
           const Divider(height: 24),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Text(
-              'Prompt Enhancer',
+              '提示词增强器',
               style: theme.textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: theme.colorScheme.primary,
@@ -104,7 +104,7 @@ class PromptsTemplatesSettingsScreen extends ConsumerWidget {
             child: ExpansionTile(
               initiallyExpanded: false,
               title: const Text(
-                'Select Enhancer Model',
+                '选择增强器模型',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               subtitle: Text(
@@ -368,7 +368,7 @@ class _ModelsInferenceSettingsScreenState
         padding: const EdgeInsets.all(16),
         children: [
           ListTile(
-            title: const Text('Local GGUF Models & Catalog'),
+            title: const Text('本地GGUF模型与目录'),
             subtitle: const Text(
                 'Browse GGUF catalog profiles, import files, and load to RAM'),
             leading:
@@ -577,9 +577,9 @@ class _KnowledgeSearchSettingsScreenState
         padding: const EdgeInsets.all(16),
         children: [
           ListTile(
-            title: const Text('Knowledge Base (Documents)'),
+            title: const Text('知识库（文档）'),
             subtitle:
-                const Text('Manage Retrieval-Augmented Generation (RAG) file秒'),
+                const Text('管理检索增强生成（RAG）文件'),
             leading:
                 Icon(Icons.library_books, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -590,7 +590,7 @@ class _KnowledgeSearchSettingsScreenState
           ),
           const Divider(height: 32),
           Text(
-            'Web Search API Integration',
+            '网页搜索API集成',
             style: theme.textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.bold,
               color: theme.colorScheme.primary,
@@ -598,7 +598,7 @@ class _KnowledgeSearchSettingsScreenState
           ),
           const SizedBox(height: 8),
           Text(
-            'A Tavily API key enables real-time search capabilities for local AI models. Get a free key at tavily.com.',
+            'Tavily API密钥为本地AI模型启用实时搜索能力。在tavily.com获取免费密钥。',
             style: theme.textTheme.bodyMedium
                 ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
           ),
@@ -657,8 +657,8 @@ class _ChatsDataSettingsScreenState
         padding: const EdgeInsets.all(16),
         children: [
           SwitchListTile(
-            title: const Text('Auto-save chat秒'),
-            subtitle: const Text('Persist chat history session database秒'),
+            title: const Text('自动保存对话'),
+            subtitle: const Text('持久化对话历史会话数据库'),
             value: autoSave,
             onChanged: (val) async {
               HapticFeedback.lightImpact();
@@ -683,7 +683,7 @@ class _ChatsDataSettingsScreenState
           const Divider(height: 1),
           ListTile(
             title: const Text('Import Data'),
-            subtitle: const Text('Restore chats and prompts from JSON backup秒'),
+            subtitle: const Text('从JSON备份恢复对话和提示词'),
             leading: Icon(Icons.upload, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
@@ -696,19 +696,19 @@ class _ChatsDataSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Starred Message秒'),
-            subtitle: const Text('View bookmarked message秒'),
+            title: const Text('收藏消息'),
+            subtitle: const Text('查看已收藏消息'),
             leading: Icon(Icons.star_outline, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/starred-message秒');
+              context.push('/settings/starred-messages');
             },
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Media Gallery'),
-            subtitle: const Text('Browse all shared images and attachment秒'),
+            title: const Text('媒体库'),
+            subtitle: const Text('浏览所有共享图片和附件'),
             leading: Icon(Icons.photo_library_outlined,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -719,23 +719,23 @@ class _ChatsDataSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Tag Management'),
-            subtitle: const Text('Organize and rename chat session tag秒'),
+            title: const Text('标签管理'),
+            subtitle: const Text('整理和重命名对话会话标签'),
             leading:
                 Icon(Icons.label_outline, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/tag秒');
+              context.push('/settings/tags');
             },
           ),
           const Divider(height: 24),
           ListTile(
-            title: Text('Clear All History',
+            title: Text('清除全部历史',
                 style: TextStyle(
                     color: theme.colorScheme.error,
                     fontWeight: FontWeight.bold)),
-            subtitle: const Text('Permanently wipe out local chat database秒'),
+            subtitle: const Text('永久清除本地对话数据'),
             leading: Icon(Icons.delete_sweep_rounded,
                 color: theme.colorScheme.error),
             trailing: const Icon(Icons.chevron_right),
@@ -815,7 +815,7 @@ class _AppearanceThemesSettingsScreenState
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  'Theme Mode',
+                  '主题模式',
                   style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: theme.colorScheme.primary,
@@ -842,7 +842,7 @@ class _AppearanceThemesSettingsScreenState
           ),
           const Divider(height: 1),
           SwitchListTile(
-            title: const Text('Haptic Feedback'),
+            title: const Text('触觉反馈'),
             subtitle:
                 const Text('Subtle haptic sensations on touch interaction'),
             value: haptic,
@@ -855,7 +855,7 @@ class _AppearanceThemesSettingsScreenState
           const Divider(height: 1),
           ListTile(
             title: const Text('Chat UI Customization'),
-            subtitle: const Text('Colors, Fonts, Message Corner Radiu秒'),
+            subtitle: const Text('颜色、字体、消息圆角半径'),
             leading:
                 Icon(Icons.palette_outlined, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -961,7 +961,7 @@ class _SystemToolsSettingsScreenState
         padding: const EdgeInsets.all(16),
         children: [
           ListTile(
-            title: const Text('Inference Benchmark'),
+            title: const Text('推理基准测试'),
             subtitle:
                 const Text('Measure local model tokens per second and latency'),
             leading: Icon(Icons.rocket_launch_outlined,
@@ -974,8 +974,8 @@ class _SystemToolsSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('User Display Profile'),
-            subtitle: const Text('Customize your displays, name, and detail秒'),
+            title: const Text('用户展示资料'),
+            subtitle: const Text('自定义您的显示名称和详细信息'),
             leading:
                 Icon(Icons.person_outline, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -986,9 +986,9 @@ class _SystemToolsSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Activity History Log'),
+            title: const Text('活动历史日志'),
             subtitle: const Text(
-                'View and query past operations and usage statistic秒'),
+                '查看和查询过往操作和使用统计'),
             leading: Icon(Icons.history, color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
@@ -998,21 +998,21 @@ class _SystemToolsSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Usage Statistics Tracker'),
+            title: const Text('使用统计追踪器'),
             subtitle: const Text(
-                'View active prompt enhancement and token analytic秒'),
+                '查看活跃的提示词增强和token分析'),
             leading: Icon(Icons.bar_chart_outlined,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               HapticFeedback.lightImpact();
-              context.push('/settings/statistic秒');
+              context.push('/settings/statistics');
             },
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Debug Error Log'),
-            subtitle: const Text('View system diagnostics error record秒'),
+            title: const Text('调试错误日志'),
+            subtitle: const Text('查看系统诊断错误记录'),
             leading: Icon(Icons.bug_report_outlined,
                 color: theme.colorScheme.primary),
             trailing: const Icon(Icons.chevron_right),
@@ -1023,7 +1023,7 @@ class _SystemToolsSettingsScreenState
           ),
           const Divider(height: 24),
           Text(
-            'Application OTA Updates',
+            '应用OTA更新',
             style: theme.textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.bold,
               color: theme.colorScheme.primary,
@@ -1031,9 +1031,9 @@ class _SystemToolsSettingsScreenState
           ),
           const SizedBox(height: 12),
           SwitchListTile(
-            title: const Text('Auto-check for Update秒'),
+            title: const Text('自动检查更新'),
             subtitle:
-                const Text('Check for updates when the application open秒'),
+                const Text('应用打开时检查更新'),
             value: _autoUpdateEnabled,
             onChanged: _toggleAutoUpdate,
             secondary: Icon(
@@ -1044,8 +1044,8 @@ class _SystemToolsSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Check for Updates Now'),
-            subtitle: const Text('Manually query latest GitHub release秒'),
+            title: const Text('立即检查更新'),
+            subtitle: const Text('手动查询最新GitHub发布'),
             leading: _isCheckingForUpdates
                 ? const SizedBox(
                     width: 24,
@@ -1058,7 +1058,7 @@ class _SystemToolsSettingsScreenState
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('View Releases on GitHub'),
+            title: const Text('在GitHub上查看发布'),
             subtitle: const Text('Open repository releases catalog page'),
             leading: const Icon(Icons.open_in_new),
             trailing: const Icon(Icons.chevron_right),

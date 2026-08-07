@@ -197,7 +197,7 @@ class _ModelCatalogScreenState extends ConsumerState<ModelCatalogScreen>
                           ),
                           const SizedBox(width: 12),
                           Text(
-                            'Import Local GGUF Files',
+                            '导入本地GGUF文件',
                             style: theme.textTheme.titleMedium?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: colorScheme.onPrimaryContainer,

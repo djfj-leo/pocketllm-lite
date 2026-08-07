@@ -55,7 +55,7 @@ class _PromptLabScreenState extends ConsumerState<PromptLabScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Active Model Profile Defaults',
+                    '当前模型配置默认值',
                     style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
